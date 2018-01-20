@@ -18,7 +18,7 @@ Part : /BASE_PART
 	ProhibitAbove = 1
 	AllowedDoorLocations
 	[
-		
+		[-1, 2]
 	]
 	EditorIcon
 	{
