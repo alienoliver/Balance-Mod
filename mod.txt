@@ -1,7 +1,7 @@
-Name = "Balance Mod"
+Name = "Increased Design Space"
 CompatibleGameVersions = ["0.13.3"]
 ModifiesMultiplayer = true
-Author = "Collapsible Scoot"
+Author = "Collapsible Scoot & CatThingy"
 Description = "Balances the game for flexible and more realistic ship design"
 StringsFolder = "Strings"
 Actions
