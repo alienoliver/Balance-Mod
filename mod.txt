@@ -8,7 +8,22 @@ Actions
 [
 	{
 		Action = Replace
-		Replace = "<Ships/Terran/big_thruster/big_thruster.txt>/Part/ProhibitBehind"
+		Replace = "<Ships/Terran/big_thruster/big_thruster.txt>/Part/ProhibitBelow"
+		With = 30
+	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/med_thruster/med_thruster.txt>/Part/ProhibitBelow"
+		With = 20
+	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/small_thruster/small_thruster.txt>/Part/ProhibitBelow"
 		With = 10
+	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/point_defense/point_defense.txt>/Part/Components/Turret/Emitter/Spread"
+		With = [-20d, 20d]
 	}
 ]
