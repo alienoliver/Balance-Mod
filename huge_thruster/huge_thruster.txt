@@ -5,7 +5,7 @@ Part : /BASE_PART
 	IDString = huge_thruster
 	EditorGroup = "Flight"
 	DescriptionKey = "Parts/HugeThrusterDesc"
-	Cost = 4000
+	Cost = 25000
 	TypeCategories = [thruster]
 	Size = [4, 5]
 	PhysicalRect = [0, 0, 4, 4]
