@@ -26,4 +26,19 @@ Actions
 		Replace = "<Ships/Terran/point_defense/point_defense.txt>/Part/Components/Turret/FireInterval"
 		With = 0.3
 	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/ArcShield/AmmoDrainPerDamage"
+		With = 1.2
+	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/BatteryStorage/MaxAmmo"
+		With = 18000
+	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/BatteryStorage/PrerequisiteMetAmmo"
+		With = 15001
+	}
 ]
