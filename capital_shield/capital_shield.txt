@@ -70,7 +70,7 @@ Part : /BASE_PART
 			HighConsumeJobPriority = &/TERRAN_PRIORITIES/ShieldGenerator_HighConsume
 			EmptyConsumeJobPriority = &/TERRAN_PRIORITIES/ShieldGenerator_EmptyConsume
 			JobUnassignThreshold = 1000000// Effectively unassignable.
-			ResupplyThreshold = 5999
+			ResupplyThreshold = 500
 			RequiredForWholePartOperation = true
 			AmmoDesireToggle = PowerToggle
 			DrainOnFtlJump = true

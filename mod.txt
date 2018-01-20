@@ -37,8 +37,7 @@ Actions
 		Overrides
 		{
 			MaxAmmo = 18000
-			PrerequisiteMetAmmo = 140001
-			ResupplyThreshold = 5999
+			PrerequisiteMetAmmo = 14001
 		}
 	}
 	{
