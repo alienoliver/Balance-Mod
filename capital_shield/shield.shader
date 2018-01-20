@@ -1,5 +1,5 @@
 #define USE_DEFAULT_VERT
-#include "../../../base.shader"
+#include "./Data/base.shader"
 
 Texture2D _waveTex;
 SamplerState _waveTex_SS;
