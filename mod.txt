@@ -55,6 +55,16 @@ Actions
 		ManyToAdd
 		[
 			&<huge_thruster/huge_thruster.txt>/Part
+<<<<<<< HEAD
+		]
+	}
+	{	
+		Action = AddMany
+		AddTo = "<Ships/Terran/terran.txt>/Terran/Parts"
+		ManyToAdd
+		[
+=======
+>>>>>>> ab6ffc4990322c43f37b891c583907a4549bcbd6
 			&<capital_shield/capital_shield.txt>/Part
 		]
 	}
