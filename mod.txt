@@ -39,6 +39,15 @@ Actions
 	{
 		Action = Replace
 		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/BatteryStorage/PrerequisiteMetAmmo"
-		With = 15001
+		With = 12001
+	}
+	{
+		Action = Remove
+		Remove = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/ProhibitAbove"
+	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/fire_extinguisher/fire_extinguisher.txt>/Part/Components/ExtinguisherProducer/Interval"
+		With = 5
 	}
 ]
