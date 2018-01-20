@@ -7,4 +7,8 @@ Parts
 	CapitalShield = "Capital Shield"
 	CapitalShieldIcon = "Capital Shield"
 	CapitalShieldDesc = "Capital ship sized shield. Has a large area of defense and high durability."
+
+	Booster = "Booster"
+	BoosterIcon = "Booster"
+	BoosterDesc = "Placing this anywhere on your ship will make it move faster"
 }

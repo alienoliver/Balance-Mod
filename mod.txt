@@ -64,6 +64,7 @@ Actions
 		[
 			&<huge_thruster/huge_thruster.txt>/Part
 			&<capital_shield/capital_shield.txt>/Part
+			&<booster/booster.txt>/Part
 		]
 	}
 	{
