@@ -31,13 +31,17 @@ Actions
 		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/ArcShield/AmmoDrainPerDamage"
 		With = 1.2
 	}
+{
+		Action = Replace
+		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/ArcShield/AmmoDrainPerDamage"
+		With = 1.2
+	}
 	{
 		Action = Overrides
-		OverrideIn = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/BatteryStorage/"
+		OverrideIn = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/PowerDrain/"
 		Overrides
 		{
-			MaxAmmo = 18000
-			PrerequisiteMetAmmo = 14001
+			FromQuantity = 200
 		}
 	}
 	{

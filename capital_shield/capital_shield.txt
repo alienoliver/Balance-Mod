@@ -63,8 +63,8 @@ Part : /BASE_PART
 		{
 			Type = AmmoConsumer
 			AmmoType = battery
-			MaxAmmo = 6000
-			PrerequisiteMetAmmo = 5001
+			MaxAmmo = 40000
+			PrerequisiteMetAmmo = 30001
 			PrerequisiteUnmetAmmo = 0
 			LowConsumeJobPriority = &/TERRAN_PRIORITIES/ShieldGenerator_LowConsume
 			HighConsumeJobPriority = &/TERRAN_PRIORITIES/ShieldGenerator_HighConsume
@@ -82,7 +82,7 @@ Part : /BASE_PART
 		{
 			Type = AmmoConverter
 			FromStorage = BatteryStorage
-			FromQuantity = 100
+			FromQuantity = 300
 			Interval = 1
 		}
 
@@ -92,7 +92,7 @@ Part : /BASE_PART
 			Radius = 10000
 			Arc = 0.2d
 			DrainAmmoFrom = BatteryStorage
-			AmmoDrainPerDamage = .5
+			AmmoDrainPerDamage = 1.5
 			Rotation = -90d
 			Location = [2, 9995]
 
