@@ -57,12 +57,12 @@ Actions
 			&<huge_thruster/huge_thruster.txt>/Part
 		]
 	}
-	{
-		Action = Overrides
-		OverrideIn = "<Ships/Terran/terran.txt>/Terran/Parts"
-		Overrides
-		{
+	{	
+		Action = AddMany
+		AddTo = "<Ships/Terran/terran.txt>/Terran/Parts"
+		ManyToAdd
+		[
 			&<capital_shield/capital_shield.txt>/Part
-		}
+		]
 	}
 ]

@@ -139,14 +139,7 @@ Part : /BASE_PART
 							SampleMode = Linear
 							MipLevels = max
 						}
-						Shader = "shield.shader"
-						_waveTex
-						{
-							File = "shield_energy_wave.png"
-							UVMode = Wrap
-							SampleMode = Linear
-							MipLevels = max
-						}
+						
 						_waveSpeed = -2
 						_waveAlpha = .75
 						_waveCurveInterval = 1
