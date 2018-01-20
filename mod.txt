@@ -38,6 +38,7 @@ Actions
 		{
 			MaxAmmo = 18000
 			PrerequisiteMetAmmo = 140001
+			ResupplyThreshold = 5999
 		}
 	}
 	{
