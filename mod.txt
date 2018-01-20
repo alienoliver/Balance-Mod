@@ -66,4 +66,58 @@ Actions
 			&<capital_shield/capital_shield.txt>/Part
 		]
 	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/armor/armor.txt>/Part/"
+		Overrides
+		{
+			MaxHealth = 7000
+			Cost = 400
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/armor_tri/armor_tri.txt>/Part/"
+		Overrides
+		{
+			MaxHealth = 1750
+			Cost = 150
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/armor_wedge/armor_wedge.txt>/Part/"
+		Overrides
+		{
+			MaxHealth = 4000
+			Cost = 200
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/armor2/armor2.txt>/Part/"
+		Overrides
+		{
+			MaxHealth = 14000
+			Cost = 800
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/armor2_wedge/armor2_wedge_L.txt>/Part/"
+		Overrides
+		{
+			MaxHealth = 7000
+			Cost = 400
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/armor2_wedge/armor2_wedge_R.txt>/Part/"
+		Overrides
+		{
+			MaxHealth = 7000
+			Cost = 400
+		}
+	}
 ]
