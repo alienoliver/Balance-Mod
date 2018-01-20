@@ -23,7 +23,7 @@ Actions
 	}
 	{
 		Action = Replace
-		Replace = "<Ships/Terran/point_defense/point_defense.txt>/Part/Components/Turret/Emitter/Spread"
-		With = [-20d, 20d]
+		Replace = "<Ships/Terran/point_defense/point_defense.txt>/Part/Components/Turret/FireInterval"
+		With = 0.3
 	}
 ]
