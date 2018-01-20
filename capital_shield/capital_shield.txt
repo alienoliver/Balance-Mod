@@ -2,7 +2,7 @@ Part : /BASE_PART
 {
 	NameKey = "Parts/CapitalShield"
 	IconNameKey = "Parts/CapitalShieldIcon"
-	IDString = shield_generator
+	IDString = capital_shield
 	EditorGroup = "Defenses"
 	DescriptionKey = "Parts/CapitalShieldDesc"
 	Cost = 5000
