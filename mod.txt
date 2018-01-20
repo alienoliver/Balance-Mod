@@ -37,7 +37,7 @@ Actions
 		Overrides
 		{
 			MaxAmmo = 18000
-			PrerequisiteMetAmmo = 120001
+			PrerequisiteMetAmmo = 12001
 		}
 	}
 	{
