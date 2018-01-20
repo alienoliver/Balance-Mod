@@ -32,14 +32,13 @@ Actions
 		With = 1.2
 	}
 	{
-		Action = Replace
-		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/BatteryStorage/MaxAmmo"
-		With = 18000
-	}
-	{
-		Action = Replace
-		Replace = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/BatteryStorage/PrerequisiteMetAmmo"
-		With = 12001
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/shield_generator/shield_generator.txt>/Part/Components/BatteryStorage/"
+		Overrides
+		{
+			MaxAmmo = 18000
+			PrerequisiteMetAmmo = 120001
+		}
 	}
 	{
 		Action = Remove
@@ -50,4 +49,5 @@ Actions
 		Replace = "<Ships/Terran/fire_extinguisher/fire_extinguisher.txt>/Part/Components/ExtinguisherProducer/Interval"
 		With = 5
 	}
+
 ]
