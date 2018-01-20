@@ -54,6 +54,7 @@ Actions
 		ManyToAdd
 		[
 			&<huge_thruster/huge_thruster.txt>/Part
+			&<capital_shield_generator/capital_shield_generator.txt>/Part
 		]
 	}
 ]

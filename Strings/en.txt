@@ -4,4 +4,7 @@ Parts
 	HugeThrusterIcon = "Huge Thruster"
 	HugeThrusterDesc = "Capital ship sized thruster. Provides a very large amount of thrust."
 
+	CapitalShieldGenerator = "Capital Shield Generator"
+	CapitalShieldGeneratorIcon = "Capital Shield Generator"
+	CapitalShieldGeneratorDesc = "Capital ship sized shield generator. Has a very large arc and is extremely durable."
 }
