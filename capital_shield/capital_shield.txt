@@ -1,24 +1,27 @@
 Part : /BASE_PART
 {
-	NameKey = "Parts/CapitalShieldGenerator"
-	IconNameKey = "Parts/CapitalShieldGeneratorIcon"
-	IDString = capital_shield_generator
+	NameKey = "Parts/CapitalShield"
+	IconNameKey = "Parts/CapitalShieldIcon"
+	IDString = shield_generator
 	EditorGroup = "Defenses"
-	DescriptionKey = "Parts/CapitalShieldGeneratorDesc"
-	Cost = 50000
+	DescriptionKey = "Parts/CapitalShieldDesc"
+	Cost = 5000
 	AIValue = 30
-	Size = [4, 6]
-	PhysicalRect = [0, 0, 4, 6]
+	Size = [2, 3]
+	PhysicalRect = [0, 1, 2, 2]
 	SaveRect = &PhysicalRect
 	SelectionPriority = 1
 	SelectionTypeByRotation = true
-	MaxHealth = 40000
-	PenetrationResistance = 3
+	MaxHealth = 4000
+	PenetrationResistance = 1
 	TypeCategories = [defense, shield]
 	ProhibitAbove = 1
 	AllowedDoorLocations
 	[
 		[-1, 2]
+		[2, 2]
+		[0, 3]
+		[1, 3]
 	]
 	EditorIcon
 	{
