@@ -1,13 +1,5 @@
 Parts
 {
-	SuperArmor = "Super Armor"
-	SuperArmorIcon = "Sup. Armor"
-	SuperArmorDesc = "Provides twice the armor at only thrice the cost!"
-
-	SuperArmorWedge = "Super Armor (Wedge)"
-	SuperArmorWedgeIcon = "Sup. Armor (Wedge)"
-	SuperArmorWedgeDesc = &SuperArmorDesc
-
 	HugeThruster = "Huge Thruster"
 	HugeThrusterIcon = "Huge Thruster"
 	HugeThrusterDesc = "Capital ship sized thruster. Provides a very large amount of thrust."

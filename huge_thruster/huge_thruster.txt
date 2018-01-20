@@ -1,14 +1,14 @@
 Part : /BASE_PART
 {
-	NameKey = "Parts/BigThruster"
-	IconNameKey = "Parts/BigThrusterIcon"
-	IDString = big_thruster
+	NameKey = "Parts/HugeThruster"
+	IconNameKey = "Parts/HugeThrusterIcon"
+	IDString = huge_thruster
 	EditorGroup = "Flight"
-	DescriptionKey = "Parts/BigThrusterDesc"
+	DescriptionKey = "Parts/HugeThrusterDesc"
 	Cost = 4000
 	TypeCategories = [thruster]
-	Size = [2, 3]
-	PhysicalRect = [0, 0, 2, 2]
+	Size = [4, 5]
+	PhysicalRect = [0, 0, 4, 4]
 	SaveRect = &PhysicalRect
 	SelectionPriority = 1
 	SelectionTypeByRotation = true
