@@ -1,0 +1,14 @@
+Name = "Balance Mod"
+CompatibleGameVersions = ["0.13.3"]
+ModifiesMultiplayer = true
+Author = "Collapsible Scoot"
+Description = "Balances the game for flexible and more realistic ship design"
+StringsFolder = "Strings"
+Actions
+[
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/big_thruster/big_thruster.txt>/Part/ProhibitBehind"
+		With = 10
+	}
+]
