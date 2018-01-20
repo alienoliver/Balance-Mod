@@ -13,17 +13,19 @@ Part : /BASE_PART
 	SelectionPriority = 1
 	SelectionTypeByRotation = true
 	SelectionTypeID = "thrusters"
-	MaxHealth = 4000
-	PenetrationResistance = 1
-	ProhibitBelow = 5
-	ThrusterForce = 500
-	FuelUsage = 250
+	MaxHealth = 25000
+	PenetrationResistance = 4
+	ProhibitBelow = 50
+	ThrusterForce = 2500
+	FuelUsage = 1000
 	AllowedDoorLocations
 	[
 		[-1, 0]
 		[0, -1]
 		[1, -1]
-		[2, 0]
+		[2, -1]
+		[3, -1]
+		[4, 0]
 	]
 	EditorIcon
 	{
@@ -67,7 +69,7 @@ Part : /BASE_PART
 		{
 			Type = AmmoConsumer
 			AmmoType = battery
-			MaxAmmo = 3000
+			MaxAmmo = 12000
 			LowConsumeJobPriority = &/TERRAN_PRIORITIES/BigThruster_LowConsume
 			HighConsumeJobPriority = &/TERRAN_PRIORITIES/BigThruster_HighConsume
 			EmptyConsumeJobPriority = &/TERRAN_PRIORITIES/BigThruster_EmptyConsume

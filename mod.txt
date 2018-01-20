@@ -49,5 +49,11 @@ Actions
 		Replace = "<Ships/Terran/fire_extinguisher/fire_extinguisher.txt>/Part/Components/ExtinguisherProducer/Interval"
 		With = 5
 	}
-
+	{	Action = AddMany
+		AddTo = "<Ships/Terran/terran.txt>/Terran/Parts"
+		ManyToAdd
+		[
+			&<huge_thruster/huge_thruster.txt>/Part
+		]
+	}
 ]
