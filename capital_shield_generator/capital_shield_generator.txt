@@ -8,7 +8,7 @@ Part : /BASE_PART
 	Cost = 50000
 	AIValue = 30
 	Size = [4, 6]
-	PhysicalRect = [0, 1, 4, 5]
+	PhysicalRect = [0, 0, 4, 6]
 	SaveRect = &PhysicalRect
 	SelectionPriority = 1
 	SelectionTypeByRotation = true
