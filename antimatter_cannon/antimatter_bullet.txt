@@ -1,14 +1,14 @@
 ID = antimatter_bullet
-Range = 120
-IdealRange = 90
-Speed = 30
+Range = 240
+IdealRange = 180
+Speed = 20
 
 Components
 {
 	Physics
 	{
 		Type = CirclePhysics
-		Radius = 0.0166
+		Radius = 1
 		Density = 0.1
 	}
 
@@ -54,7 +54,7 @@ Components
 	{
 		Type = PenetratingHit
 		PhysicsComponent = Physics
-		Penetration = 5
+		Penetration = 20
 		PenetrationSpeed = 15
 
 		HitShield
@@ -63,11 +63,11 @@ Components
 			[
 				{
 					Type = ShieldDamage
-					Damage = 2400
+					Damage = 20000
 				}
 				{
 					Type = Impulse;
-					Impulse = 80;
+					Impulse = 150;
 				}
 			]
 
@@ -79,11 +79,11 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 2400
+					Damage = 10000
 				}
 				{
 					Type = Impulse;
-					Impulse = 80;
+					Impulse = 200;
 				}
 			]
 
@@ -102,7 +102,7 @@ Components
 
 				: /SHAKES/Shake
 				{
-					ShakeAmount = .1
+					ShakeAmount = .4
 					Duration = .75
 				}
 			]
@@ -113,11 +113,11 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 1200
+					Damage = 10000
 				}
 				{
 					Type = Impulse;
-					Impulse = 40;
+					Impulse = 100;
 				}
 			]
 
@@ -139,11 +139,11 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 1200
+					Damage = 7500
 				}
 				{
 					Type = PartFire
-					FireChance = .2
+					FireChance = .5
 				}
 			]
 

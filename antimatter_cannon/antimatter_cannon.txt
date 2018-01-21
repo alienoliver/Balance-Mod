@@ -8,6 +8,7 @@ Part : /BASE_PART
 	Cost = 150000
 	AIValue = 30
 	TypeCategories = [weapon]
+	RequiresCategories = [AntimatterWeapons]
 	Size = [5, 7]
 	PhysicalRect = [0, 0, 5, 7]
 	SaveRect = &PhysicalRect
@@ -19,10 +20,12 @@ Part : /BASE_PART
 	ProhibitAbove = 5
 	AllowedDoorLocations
 	[
-		[-1, 2]
-		[-1, 3]
+		[-1, 4]
+		[-1, 5]
 		[1, 7]
-		[2, 7]
+		[3, 7]
+		[5, 4]
+		[5, 5]
 	]
 	EditorIcon
 	{
@@ -63,7 +66,7 @@ Part : /BASE_PART
 		Graphics
 		{
 			Type = Graphics
-			Location = [1.5, 1]
+			Location = [2.5, 1]
 			Floor
 			{
 				Layer = "floors"
@@ -179,7 +182,7 @@ Part : /BASE_PART
 		Turret
 		{
 			Type = TurretWeapon
-			Location = [1.5, 1] // Relative to upper-left corner of unrotated part.
+			Location = [2.5, 1] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
 			FireInterval = 1.2
 			FiringArc = 115d

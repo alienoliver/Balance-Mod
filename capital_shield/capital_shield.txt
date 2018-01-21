@@ -129,7 +129,7 @@ Part : /BASE_PART
 					FadeInTime = .1
 					FadeOutTime = .5
 					Radius = &~/Part/Components/ArcShield/Radius
-					Arc = 20d
+					Arc = 0.2d
 					ArcSprite
 					{
 						Texture
