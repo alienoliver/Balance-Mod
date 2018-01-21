@@ -191,23 +191,6 @@ Actions
 			Bottom = 75
 		}
 	}
-<<<<<<< HEAD
-	{
-		Action = Overrides
-		OverrideIn = "<Ships/Terran/sensor_array/sensor_array.txt>/Part/"
-		Overrides
-		{
-			TypeCategories[type1]
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<Ships/Terran/armor/armor.txt>/Part/"
-		Overrides
-		{
-			RequiresCategories[type1]
-		}
-	}
 	{
 		Action = Overrides
 		OverrideIn = "<Ammo/ammo.txt>/Ammo/4/"
@@ -224,6 +207,4 @@ Actions
 			CarriedSpriteOffset = [0, .25]
 		}
 	}
-=======
->>>>>>> 6499d96b10a51770b45b4af8461bba4dccb5cb3f
 ]
