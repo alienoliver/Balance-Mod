@@ -95,7 +95,7 @@ Part : /BASE_PART
 			ToStorage = AntimatterStorage
 			FromQuantity = 400
 			ToQuantity = 1
-			Interval = .5
+			Interval = 5
 
 			ConvertAmmoMediaEffects
 			[
