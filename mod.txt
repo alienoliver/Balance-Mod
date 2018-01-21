@@ -66,6 +66,7 @@ Actions
 			&<capital_shield/capital_shield.txt>/Part
 			&<booster/booster.txt>/Part
 			&<antimatter_reactor/antimatter_reactor.txt>/Part
+			&<weapons_module/weapons_module.txt>/Part
 		]
 	}
 	{
@@ -187,22 +188,6 @@ Actions
 			Right = 75
 			Top =  -75
 			Bottom = 75
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<Ships/Terran/sensor_array/sensor_array.txt>/Part/"
-		Overrides
-		{
-			TypeCategories[type1]
-		}
-	}
-	{
-		Action = Overrides
-		OverrideIn = "<Ships/Terran/armor/armor.txt>/Part/"
-		Overrides
-		{
-			RequiresCategories[type1]
 		}
 	}
 ]

@@ -16,6 +16,7 @@ Part : /BASE_PART
 	CrewSpeedFactor = 0
 	IsRotateable = true
 	IsWalled = true
+	Density =  -5
 	AllowedDoorLocations = []
 	GeneratorRequiresDoor = false
 	IgnoreRotationForMirroredSelection = true

@@ -15,6 +15,10 @@ Parts
 	AntimatterReactor = "Antimatter Reactor"
 	AntimatterReactorIcon = "Antimatter Reactor"
 	AntimatterReactorDesc = "Feeds off of the souls of your crew to produce antimatter for antimatter modules."
+
+	WeaponsModule = "Weapons Module"
+	WeaponsModuleIcon = "Weapons Module"
+	WeaponsModuleDesc = "Distributes antimatter to weapons systems."
 }
 Hud
 {
