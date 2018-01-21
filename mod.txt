@@ -192,10 +192,10 @@ Actions
 		}
 	}
 	{
-		Action = Overrides
-		OverrideIn = "<Ammo/ammo.txt>/Ammo/4/"
-		Overrides
-		{
+		Action = AddMany
+		AddTo = "<Ammo/ammo.txt>/Ammo/4/"
+		ManyToAdd
+		[
 			ID = antimatter
 			MaxCarried = 100
 			CarriedSprite
@@ -205,6 +205,6 @@ Actions
 				UVRotation = 2
 			}
 			CarriedSpriteOffset = [0, .25]
-		}
+		]
 	}
 ]
