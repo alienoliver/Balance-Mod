@@ -1,0 +1,373 @@
+Part : /BASE_PART
+{
+	NameKey = "Parts/GatlingTurret"
+	IconNameKey = "Parts/GatlingTurretIcon"
+	IDString = gatling_turret
+	EditorGroup = "Weapons"
+	DescriptionKey = "Parts/GatlingTurretDesc"
+	Cost = 7500
+	AIValue = 7
+	Size = [1, 2]
+	PhysicalRect = [0, 1, 1, 1]
+	SaveRect = &PhysicalRect
+	SelectionPriority = 1
+	SelectionTypeByRotation = true
+	MaxHealth = 5000
+	PenetrationResistance = 2
+	ProhibitAbove = 1
+	AllowedDoorLocations
+	[
+		[-1, 1]
+		[1, 1]
+		[0, 2]
+	]
+	EditorIcon
+	{
+		Texture
+		{
+			File = "icon.png"
+			SampleMode = Linear
+		}
+		Size = [21.33, 42.66]
+	}
+	BlueprintSprites
+	[
+		{
+			File = "blueprints.png"
+			Size = [1, 2]
+		}
+	]
+	PowerUIStats
+	{
+		Min = .333
+		Ideal = .666
+	}
+	CrewUIStats
+	{
+		Min = 0
+		Ideal = 1
+	}
+	Components
+	{
+		PowerToggle
+		{
+			Type = UIToggle
+			ToggleID = "on_off"
+			DefaultToggleValue = 1
+			RequiredForWholePartOperation = true
+			ToggledOnChoices = [1]
+		}
+
+		FireModeToggle
+		{
+			Type = UIToggle
+			ToggleID = "fire_mode"
+			DefaultToggleValue = 1
+			ToggledOnChoices = [1]
+		}
+
+		BatteryStorage
+		{
+			Type = AmmoConsumer
+			AmmoType = battery
+			MaxAmmo = 3000
+			LowConsumeJobPriority = &/TERRAN_PRIORITIES/PointDefense_LowConsume
+			HighConsumeJobPriority = &/TERRAN_PRIORITIES/PointDefense_HighConsume
+			EmptyConsumeJobPriority = &/TERRAN_PRIORITIES/PointDefense_EmptyConsume
+			JobUnassignThreshold = 1000000// Effectively unassignable.
+			RequiredForWholePartOperation = true
+			AmmoDesireToggle = PowerToggle
+
+			ReceiveAmmoMediaEffects = &/EFFECT_PREFABS/PowerDeliver
+		}
+
+		Graphics
+		{
+			Type = Graphics
+			Location = [.5, 1.5]
+			Floor
+			{
+				Layer = "floors"
+				DamageLevels
+				[
+					{
+						File = "floor.png"
+						Size = [1, 1]
+					}
+					{
+						File = "floor_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "floor_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			OperationalDoodad
+			{
+				Layer = "doodads_high"
+				Offset = [0, -0.5]
+				DamageLevels
+				[
+					{
+						File = "doodads_on.png"
+						Size = [1, 2]
+					}
+					{
+						File = "doodads_on_33.png"
+						Size = [1, 2]
+					}
+					{
+						File = "doodads_on_66.png"
+						Size = [1, 2]
+					}
+				]
+			}
+			NonOperationalDoodad
+			{
+				Layer = "doodads_high"
+				Offset = [0, -0.5]
+				DamageLevels
+				[
+					{
+						File = "doodads_off.png"
+						Size = [1, 2]
+					}
+					{
+						File = "doodads_off_33.png"
+						Size = [1, 2]
+					}
+					{
+						File = "doodads_off_66.png"
+						Size = [1, 2]
+					}
+				]
+			}
+			OperationalLighting
+			{
+				Layer = "lights_add"
+				DamageLevels
+				[
+					{
+						File = "lights.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			Walls
+			{
+				Layer = "walls"
+				DamageLevels
+				[
+					{
+						File = "walls.png"
+						Size = [1, 1]
+					}
+					{
+						File = "walls_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "walls_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			Roof
+			{
+				Layer = "roofs"
+				DamageLevels
+				[
+					{
+						File = "roof.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			OperationalRoofWindows
+			{
+				Layer = "roof_windows"
+				DamageLevels
+				[
+					{
+						File = "roof_window.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_window_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_window_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			NonOperationalRoofWindows = &OperationalRoofWindows
+		}
+
+		Turret
+		{
+			Type = TurretWeapon
+			Location = [.5, 0.89]// Relative to upper-left corner of unrotated part.
+			Rotation = -90d// Relative to unrotated part.
+			FireInterval = .1
+			FireDelay = 0
+			FiringArc = 80d
+			RotateSpeed = 90d
+			FireThresholdAngle = 1d
+			SpawnLoc = [0.6875, 0]
+			AmmoStorage = BatteryStorage
+			AmmoUsed = 100
+			TargetSearchTriesPerFrame = 1
+			AIFirepowerRating = 1000
+			FireModeToggle = FireModeToggle
+
+			Emitter
+			{
+				Type = Bullet
+				Bullet = &<gatling_shot.txt>
+				Spread = [-5d, 5d]
+			}
+		}
+
+		FireEffect
+		{
+			Type = TriggeredEffects
+			ChainedTo = Turret
+			Location = [0.6875, 0]
+			AnchorMediaEffects = true
+
+			MediaEffects
+			[
+				&/PARTICLES/PointDefenseShoot
+
+				: /SOUNDS/AudioExterior
+				{
+					Sound = "point_defense_shoot.wav"
+					Volume = .25
+					SpeedVariation = .25
+				}
+			]
+		}
+
+		TurretGraphics
+		{
+			Type = Graphics
+			ChainedTo = Turret
+			Location = [-0.109375, 0]
+			Rotation = 90d
+			OperationalDoodad
+			{
+				Layer = "turrets"
+				DamageLevels
+				[
+					{
+						File = "turret_on.png"
+						Size = [1, 2]
+					}
+					{
+						File = "turret_on_33.png"
+						Size = [1, 2]
+					}
+					{
+						File = "turret_on_66.png"
+						Size = [1, 2]
+					}
+				]
+			}
+			NonOperationalDoodad
+			{
+				Layer = "turrets"
+				DamageLevels
+				[
+					{
+						File = "turret_off.png"
+						Size = [1, 2]
+					}
+					{
+						File = "turret_off_33.png"
+						Size = [1, 2]
+					}
+					{
+						File = "turret_off_66.png"
+						Size = [1, 2]
+					}
+				]
+			}
+		}
+
+		BatterySprites
+		{
+			Type = AmmoSprites
+			Location = [.5, 1.5]
+			AmmoStorage = BatteryStorage
+			Layer = "doodads_low"
+			HasZeroAmmoSprite = true
+			AmmoLevels
+			[
+				{
+					File = "battery0.png"
+					Size = [1, 1]
+				}
+				{
+					File = "battery1.png"
+					Size = [1, 1]
+				}
+			]
+		}
+
+		OperationEffects
+		{
+			Type = OperationEffects
+			Location = [.5, 1.5]
+			BecameOperationalMediaEffects = &/EFFECT_PREFABS/PowerOn
+			BecameNonOperationalMediaEffects = &/EFFECT_PREFABS/PowerOff
+		}
+
+		DestroyedEffects
+		{
+			Type = DeathEffects
+			MediaEffects = &/EFFECT_PREFABS/SmallPartDestroyed
+			Location = [.5, 1.5]
+		}
+
+		Indicators
+		{
+			Type = IndicatorSprites
+			Location = [.5, 1.5]
+			Layer = "indicators"
+			Indicators
+			[
+				// Turned off.
+				{
+					Source = PowerToggle
+					AtlasSprite
+					{
+						File = &/INDICATORS/PowerOff
+						Size = [1, 1]
+					}
+				}
+
+				// Out of power.
+				{
+					Source = BatteryStorage
+					AtlasSprite
+					{
+						File = &/INDICATORS/NoPower
+						Size = [1, 1]
+					}
+				}
+			]
+		}
+	}
+}
