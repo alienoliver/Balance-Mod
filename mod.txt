@@ -122,11 +122,59 @@ Actions
 		}
 	}
 	{
-		Action = Overrides
-		OverrideIn = "<Ships/base part.txt>"
-		Overrides
+		Action = Replace
+		Replace = "<rules.txt>/Simulation/GameSpeeds/0"
+		With
 		{
-			Density = -10
+			Speed=.0625; NameKey="Hud/SpeedSixteenth"; LongNameKey="Hud/SpeedSixteenthLong"
+		}
+	}
+	{
+		Action = Replace
+		Replace = "<rules.txt>/Simulation/GameSpeeds/1"
+		With
+		{
+			Speed=.125; NameKey="Hud/SpeedEighth"; LongNameKey="Hud/SpeedEighthLong"
+		}
+	}
+	{
+		Action = Replace
+		Replace = "<rules.txt>/Simulation/GameSpeeds/2"
+		With
+		{
+			Speed=.25; NameKey="Hud/SpeedQuarter"; LongNameKey="Hud/SpeedQuarterLong"
+		}
+	}
+	{
+		Action = Replace
+		Replace = "<rules.txt>/Simulation/GameSpeeds/3"
+		With
+		{
+			Speed=.5; NameKey="Hud/SpeedHalf"; LongNameKey="Hud/SpeedHalfLong"
+		}
+	}
+	{
+		Action = Replace
+		Replace = "<rules.txt>/Simulation/GameSpeeds/4"
+		With
+		{
+			Speed=1; NameKey="Hud/Speed1"; LongNameKey="Hud/Speed1Long"
+		}
+	}
+	{
+		Action = Add
+		AddTo = "<rules.txt>/Simulation/GameSpeeds"
+		ToAdd
+		{
+			Speed=2; NameKey="Hud/Speed2"; LongNameKey="Hud/Speed2Long"
+		}
+	}
+	{
+		Action = Add
+		AddTo = "<rules.txt>/Simulation/GameSpeeds"
+		ToAdd
+		{
+			Speed=4; NameKey="Hud/Speed4"; LongNameKey="Hud/Speed4Long"
 		}
 	}
 ]

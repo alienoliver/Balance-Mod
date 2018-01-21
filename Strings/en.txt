@@ -12,3 +12,11 @@ Parts
 	BoosterIcon = "Booster"
 	BoosterDesc = "Placing this anywhere on your ship will make it move faster"
 }
+Hud
+{
+	SpeedSixteenth = "1/16"
+	SpeedSixteenthLong = "Ludicrously Slow (1/16)"
+
+	SpeedEighth = "1/8"
+	SpeedEighthLong = "Extremely Slow (1/8)"
+}
