@@ -12,9 +12,9 @@ Parts
 	BoosterIcon = "Booster"
 	BoosterDesc = "Placing this anywhere on your ship will make it move faster."
 
-	AnitmatterReactor = "Anitmatter Reactor"
-	AnitmatterReactorIcon = "Anitmatter Reactor"
-	AnitmatterReactorDesc = "Generates antimatter to power antimatter modules."
+	AntimatterReactor = "Antimatter Reactor"
+	AntimatterReactorIcon = "Antimatter Reactor"
+	AntimatterReactorDesc = "Feeds off of the souls of your crew to produce antimatter for antimatter modules."
 }
 Hud
 {

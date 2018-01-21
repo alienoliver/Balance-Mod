@@ -13,7 +13,7 @@ Part : /BASE_PART
 	PenetrationResistance = 10
 	IsWalled = true
 	AllowedDoorLocations = []
-	TypeCategories = [power, reactor, AntimatterReactor]
+	TypeCategories = [AntimatterReactor]
 	CreatePartPerTileWhenDestroyed = ""
 	IgnoreRotationForMirroredSelection = true
 	EditorIcon
@@ -211,25 +211,6 @@ Part : /BASE_PART
 					ImpulsePerTile = 10
 					ImpulseRadius = 10
 					Delay = .05
-				}
-			]
-		}
-
-		Indicators
-		{
-			Type = IndicatorSprites
-			Location = [1, 1]
-			Layer = "indicators"
-			Indicators
-			[
-				// Out of power.
-				{
-					Source = BatteryStorage
-					AtlasSprite
-					{
-						File = &/INDICATORS/NoPower
-						Size = [1.5, 1.5]
-					}
 				}
 			]
 		}
