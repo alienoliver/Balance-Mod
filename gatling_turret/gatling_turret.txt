@@ -238,6 +238,21 @@ Part : /BASE_PART
 				Bullet = &<gatling_shot.txt>
 				Spread = [-5d, 5d]
 			}
+			BlueprintArcSprite
+			{
+				Texture = &/INDICATORS/WeaponArc
+				Size = [0, 1.5]
+				Color = [255, 0, 0, 63]
+			}
+			BlueprintArcRadius = 10
+			BlueprintArcSpriteSegments = 64
+
+			CoverageSectorArc
+			{
+				Texture = &/INDICATORS/Falloff
+				VertexColor = [255, 255, 255, 51]
+				QuadCount = 64
+			}
 		}
 
 		FireEffect
