@@ -85,8 +85,19 @@ Part : /BASE_PART
 
 			ReceiveAmmoMediaEffects = &/EFFECT_PREFABS/AmmoDeliver
 		}
+		AmmoLoader
+		{
+			Type = AmmoConverter
+			OnlyWhenOperational = false
+			FromStorage = AmmoStorage
+			ToStorage = LoadedAmmo
+			FromQuantity = 1
+			ToQuantity = 1
+			DelayTrigger = Turret
+			DelayAfterTrigger = .5
 
-
+			ConvertAmmoMediaEffects = &/EFFECT_PREFABS/AmmoLoad
+		}
 		Graphics
 		{
 			Type = Graphics
@@ -213,6 +224,8 @@ Part : /BASE_PART
 			RotateSpeed = 30d
 			FireThresholdAngle = 1d
 			SpawnLoc = [3, 0]
+			AmmoStorage = LoadedAmmo
+			AmmoUsed = 1
 			TargetSearchTriesPerFrame = 1
 			AIFirepowerRating = 2400
 			FireModeToggle = FireModeToggle
