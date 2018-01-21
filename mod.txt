@@ -177,4 +177,15 @@ Actions
 			Speed=4; NameKey="Hud/Speed4"; LongNameKey="Hud/Speed4Long"
 		}
 	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/base ship.txt>/MaxBorders"
+		Overrides
+		{
+			Left =  -75
+			Right = 75
+			Top =  -75
+			Bottom = 75
+		}
+	}
 ]
