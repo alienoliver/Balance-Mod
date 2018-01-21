@@ -67,6 +67,7 @@ Actions
 			&<booster/booster.txt>/Part
 			&<antimatter_reactor/antimatter_reactor.txt>/Part
 			&<weapons_module/weapons_module.txt>/Part
+			&<antimatter_cannon/antimatter_cannon.txt>/Part
 		]
 	}
 	{

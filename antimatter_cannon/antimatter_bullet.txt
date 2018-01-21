@@ -1,0 +1,163 @@
+ID = antimatter_bullet
+Range = 120
+IdealRange = 90
+Speed = 30
+
+Components
+{
+	Physics
+	{
+		Type = CirclePhysics
+		Radius = 0.0166
+		Density = 0.1
+	}
+
+	Death
+	{
+		Type = DeathByLifetime
+		// Lifetime will be auto-calculated based on range and speed.
+	}
+
+	Sprite
+	{
+		Type = AnimatedSprite
+		Animation
+		{
+			AtlasSprite
+			{
+				Texture
+				{
+					File = "med bullet.png" // Just re-use the medium cannon's bullet.
+					SampleMode = Linear
+					MipLevels = max
+				}
+				Size = [3, 3]
+			}
+			FrameCount = 16
+			FrameSize = [128, 128]
+			FramesPerRow = 4
+			FramesPerSecond = 60
+		}
+	}
+
+	MediaEffects
+	{
+		Type = MediaEffects
+		InheritShooterVelocityFrom = Physics
+		MediaEffects
+		[
+			&/PARTICLES/BigBulletTrail
+		]
+	}
+
+	Hit
+	{
+		Type = PenetratingHit
+		PhysicsComponent = Physics
+		Penetration = 5
+		PenetrationSpeed = 15
+
+		HitShield
+		{
+			HitEffects
+			[
+				{
+					Type = ShieldDamage
+					Damage = 2400
+				}
+				{
+					Type = Impulse;
+					Impulse = 80;
+				}
+			]
+
+			MediaEffects = &../HitOperational/MediaEffects
+		}
+		HitOperational
+		{
+			HitEffects
+			[
+				{
+					Type = PartDamage
+					Damage = 2400
+				}
+				{
+					Type = Impulse;
+					Impulse = 80;
+				}
+			]
+
+			MediaEffects
+			[
+				&/PARTICLES/BigBulletHit
+				&/PARTICLES/BigBulletSmoke
+				&/PARTICLES/BigBulletFlash
+
+				: /SOUNDS/AudioExterior
+				{
+					Sound = "big_bullet_hit.wav"
+					Volume = .75
+					SpeedVariation = .4
+				}
+
+				: /SHAKES/Shake
+				{
+					ShakeAmount = .1
+					Duration = .75
+				}
+			]
+		}
+		HitStructural
+		{
+			HitEffects
+			[
+				{
+					Type = PartDamage
+					Damage = 1200
+				}
+				{
+					Type = Impulse;
+					Impulse = 40;
+				}
+			]
+
+			MediaEffects
+			[
+				&/PARTICLES/BigBulletHitStruct
+
+				: /SOUNDS/AudioExterior
+				{
+					Sound = "big_bullet_hit_structure.wav"
+					Volume = .5
+					SpeedVariation = .4
+				}
+			]
+		}
+		PenetratingOperational
+		{
+			HitEffects
+			[
+				{
+					Type = PartDamage
+					Damage = 1200
+				}
+				{
+					Type = PartFire
+					FireChance = .2
+				}
+			]
+
+			MediaEffects
+			[
+				&/PARTICLES/BigBulletPenetrate
+				&/PARTICLES/BigBulletFlash
+			]
+		}
+		PenetratingStructural
+		{
+			// No effect.
+		}
+		FinishedPenetratingOperational = &PenetratingOperational
+		FinishedPenetratingStructural = &PenetratingStructural
+	}
+}

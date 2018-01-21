@@ -19,6 +19,10 @@ Parts
 	WeaponsModule = "Weapons Module"
 	WeaponsModuleIcon = "Weapons Module"
 	WeaponsModuleDesc = "Distributes antimatter to weapons systems."
+
+	AntimatterCannon = "Antimatter Cannon"
+	AntimatterCannonIcon = "Antimatter Cannon"
+	AntimatterCannonDesc = "Fires destructive globs of antimatter at enemy ships"
 }
 Hud
 {
