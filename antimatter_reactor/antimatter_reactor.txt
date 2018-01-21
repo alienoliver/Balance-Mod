@@ -34,6 +34,62 @@ Part : /BASE_PART
 	]
 	Components
 	{
+		PowerToggle
+		{
+			Type = UIToggle
+			ToggleID = "on_off"
+			DefaultToggleValue = 1
+			RequiredForWholePartOperation = true
+			ToggledOnChoices = [1]
+		}
+
+		AntimatterStorage
+		{
+			Type = AmmoStorage
+			AmmoType = missile_part
+			MaxAmmo = 12
+			SuppliesAmmo = true
+			AssumeAlwaysHasAmmo = true
+			WaitPerDistToNextClosest = .5
+		}
+
+		BatteryStorage
+		{
+			Type = AmmoConsumer
+			AmmoType = battery
+			MaxAmmo = 20000
+			LowConsumeJobPriority = &/TERRAN_PRIORITIES/AmmoFactory_LowConsume
+			HighConsumeJobPriority = &/TERRAN_PRIORITIES/AmmoFactory_HighConsume
+			EmptyConsumeJobPriority = &/TERRAN_PRIORITIES/AmmoFactory_EmptyConsume
+			JobUnassignThreshold = 1000000// Effectively unassignable.
+			ResupplyThreshold = 500
+			RequiredForWholePartOperation = true
+			AmmoDesireToggle = PowerToggle
+
+			ReceiveAmmoMediaEffects = &/EFFECT_PREFABS/PowerDeliver
+		}
+
+		AmmoConverter
+		{
+			Type = AmmoConverter
+			Location = [1, 1]
+			FromStorage = BatteryStorage
+			ToStorage = AntimatterStorage
+			FromQuantity = 400
+			ToQuantity = 1
+			Interval = .5
+
+			ConvertAmmoMediaEffects
+			[
+				: /SOUNDS/AudioInterior
+				{
+					Sound = "../ammo_factory/bullet_create.wav"
+					Volume = .1
+					Speed = .5
+					SpeedVariation = .05
+				}
+			]
+		}
 		Graphics
 		{
 			Type = Graphics

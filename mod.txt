@@ -205,4 +205,20 @@ Actions
 			RequiresCategories[type1]
 		}
 	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ammo/ammo.txt>/Ammo/4/"
+		Overrides
+		{
+			ID = antimatter
+			MaxCarried = 100
+			CarriedSprite
+			{
+				File = "../Ships/Terran/fire_extinguisher/extinguisher.png"
+				Size = [1, 1]
+				UVRotation = 2
+			}
+			CarriedSpriteOffset = [0, .25]
+		}
+	}
 ]
