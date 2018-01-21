@@ -184,8 +184,8 @@ Part : /BASE_PART
 			Type = TurretWeapon
 			Location = [2.5, 1] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
-			FireInterval = 1.2
-			FiringArc = 115d
+			FireInterval = 10
+			FiringArc = 100d
 			RotateSpeed = 30d
 			FireThresholdAngle = 1d
 			SpawnLoc = [3, 0]
