@@ -63,8 +63,8 @@ Part : /BASE_PART
 		{
 			Type = AmmoConsumer
 			AmmoType = battery
-			MaxAmmo = 40000
-			PrerequisiteMetAmmo = 30001
+			MaxAmmo = 80000
+			PrerequisiteMetAmmo = 65001
 			PrerequisiteUnmetAmmo = 0
 			LowConsumeJobPriority = &/TERRAN_PRIORITIES/ShieldGenerator_LowConsume
 			HighConsumeJobPriority = &/TERRAN_PRIORITIES/ShieldGenerator_HighConsume
