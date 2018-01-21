@@ -192,10 +192,10 @@ Actions
 		}
 	}
 	{
-		Action = AddMany
-		AddTo = "<Ammo/ammo.txt>/Ammo/4/"
-		ManyToAdd
-		[
+		Action = Add
+		AddTo = "<Ammo/ammo.txt>/Ammo"
+		ToAdd
+		{
 			ID = antimatter
 			MaxCarried = 100
 			CarriedSprite
@@ -205,7 +205,7 @@ Actions
 				UVRotation = 2
 			}
 			CarriedSpriteOffset = [0, .25]
-		]
+		}
 	}
 ]
 
