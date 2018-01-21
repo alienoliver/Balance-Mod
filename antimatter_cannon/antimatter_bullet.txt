@@ -63,7 +63,7 @@ Components
 			[
 				{
 					Type = ShieldDamage
-					Damage = 30000
+					Damage = 50000
 				}
 				{
 					Type = Impulse;
