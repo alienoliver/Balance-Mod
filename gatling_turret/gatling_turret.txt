@@ -259,7 +259,29 @@ Part : /BASE_PART
 				}
 			]
 		}
-
+		CrewLocation
+		{
+			Type = CrewLocation
+			Location = [.5, 1.65]
+			Rotation = 180d
+		}
+		PartCrew
+		{
+			Type = PartCrew
+			MinCrew = 1
+			FirstCrewJobPriority = &/TERRAN_PRIORITIES/SmallLaser_FirstCrew
+			AdditionalCrewJobPriority = &/TERRAN_PRIORITIES/SmallLaser_AdditionalCrew
+			FullCrewJobPriority = &/TERRAN_PRIORITIES/SmallLaser_FullCrew
+			PrerequisitesBeforeCrewing = [BatteryStorage, PowerToggle]
+			CrewDestinations
+			[
+				&../../CrewLocation/Location
+			]
+			CrewLocations
+			[
+				CrewLocation
+			]
+		}
 		TurretGraphics
 		{
 			Type = Graphics
@@ -364,6 +386,14 @@ Part : /BASE_PART
 					AtlasSprite
 					{
 						File = &/INDICATORS/NoPower
+						Size = [1, 1]
+					}
+				}
+				{
+					Source = PartCrew
+					AtlasSprite
+					{
+						File = &/INDICATORS/NoCrew
 						Size = [1, 1]
 					}
 				}
