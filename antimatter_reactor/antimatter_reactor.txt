@@ -46,7 +46,7 @@ Part : /BASE_PART
 		AntimatterStorage
 		{
 			Type = AmmoStorage
-			AmmoType = missile_part
+			AmmoType = antimatter
 			MaxAmmo = 12
 			SuppliesAmmo = true
 			AssumeAlwaysHasAmmo = true
@@ -83,7 +83,7 @@ Part : /BASE_PART
 			[
 				: /SOUNDS/AudioInterior
 				{
-					Sound = "../ammo_factory/bullet_create.wav"
+					Sound = "antimatter_create.wav"
 					Volume = .1
 					Speed = .5
 					SpeedVariation = .05

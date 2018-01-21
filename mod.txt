@@ -200,7 +200,7 @@ Actions
 			MaxCarried = 100
 			CarriedSprite
 			{
-				File = "../Ships/Terran/fire_extinguisher/extinguisher.png"
+				File = "antimatter_reactor/antimatter.png"
 				Size = [1, 1]
 				UVRotation = 2
 			}
