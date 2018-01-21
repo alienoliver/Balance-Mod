@@ -14,7 +14,6 @@ Part : /BASE_PART
 	PenetrationResistance = 1
 	CreatePartPerTileWhenGrabbed = ""
 	CrewSpeedFactor = 0
-	Density =  -10
 	IsRotateable = true
 	IsWalled = true
 	AllowedDoorLocations = []

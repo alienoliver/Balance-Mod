@@ -121,4 +121,12 @@ Actions
 			Cost = 400
 		}
 	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/base_part.txt>"
+		Overrides
+		{
+			Density = -10
+		}
+	}
 ]
