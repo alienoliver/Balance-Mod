@@ -188,4 +188,20 @@ Actions
 			Bottom = 75
 		}
 	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/sensor_array/sensor_array.txt>/Part/"
+		Overrides
+		{
+			TypeCategories[type1]
+		}
+	}
+	{
+		Action = Overrides
+		OverrideIn = "<Ships/Terran/armor/armor.txt>/Part/"
+		Overrides
+		{
+			RequiresCategories[type1]
+		}
+	}
 ]
