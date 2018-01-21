@@ -54,7 +54,7 @@ Components
 	{
 		Type = PenetratingHit
 		PhysicsComponent = Physics
-		Penetration = 20
+		Penetration = 15
 		PenetrationSpeed = 15
 
 		HitShield
@@ -63,7 +63,7 @@ Components
 			[
 				{
 					Type = ShieldDamage
-					Damage = 20000
+					Damage = 30000
 				}
 				{
 					Type = Impulse;
