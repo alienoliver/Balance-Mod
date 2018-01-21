@@ -62,6 +62,30 @@ Part : /BASE_PART
 			DefaultToggleValue = 1
 			ToggledOnChoices = [1]
 		}
+		LoadedAmmo
+		{
+			Type = AmmoStorage
+			AmmoType = antimatter
+			MaxAmmo = 1
+			DelayBeforeReadyToUse = 5
+			AnticipateMoreAmmoFrom = ["AmmoStorage"]
+		}
+
+		AmmoStorage
+		{
+			Type = AmmoConsumer
+			AmmoType = antimatter
+			MaxAmmo = 5
+			LowConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_LowConsume
+			HighConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_HighConsume
+			EmptyConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_EmptyConsume
+			JobUnassignThreshold = 1000000// Effectively unassignable.
+			AdditionalStorageForJobPriority = [LoadedAmmo]
+			AmmoDesireToggle = PowerToggle
+
+			ReceiveAmmoMediaEffects = &/EFFECT_PREFABS/AmmoDeliver
+		}
+
 
 		Graphics
 		{
