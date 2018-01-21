@@ -1,0 +1,412 @@
+Part : /BASE_PART
+{
+	NameKey = "Parts/AntimatterCannon"
+	IconNameKey = "Parts/AntimatterCannonIcon"
+	IDString = antimatter_cannon
+	EditorGroup = "Weapons"
+	DescriptionKey = "Parts/AntimatterCannonDesc"
+	Cost = 150000
+	AIValue = 30
+	TypeCategories = [weapon]
+	RequiresCategories = [AntimatterWeapons]
+	Size = [5, 7]
+	PhysicalRect = [0, 0, 5, 7]
+	SaveRect = &PhysicalRect
+	SelectionPriority = 1
+	SelectionTypeByRotation = true
+	SelectionTypeID = "cannons"
+	MaxHealth = 50000
+	PenetrationResistance = 5
+	ProhibitAbove = 5
+	AllowedDoorLocations
+	[
+		[-1, 4]
+		[-1, 5]
+		[1, 7]
+		[3, 7]
+		[5, 4]
+		[5, 5]
+	]
+	EditorIcon
+	{
+		Texture
+		{
+			File = "icon.png"
+			SampleMode = Linear
+		}
+		Size = [55.2, 92]
+	}
+	BlueprintSprites
+	[
+		{
+			File = "blueprints.png"
+			Size = [3, 5]
+			Offset = [0, -1]
+		}
+	]
+	Components
+	{
+		PowerToggle
+		{
+			Type = UIToggle
+			ToggleID = "on_off"
+			DefaultToggleValue = 1
+			RequiredForWholePartOperation = true
+			ToggledOnChoices = [1]
+		}
+
+		FireModeToggle
+		{
+			Type = UIToggle
+			ToggleID = "fire_mode"
+			DefaultToggleValue = 1
+			ToggledOnChoices = [1]
+		}
+
+		Graphics
+		{
+			Type = Graphics
+			Location = [2.5, 1]
+			Floor
+			{
+				Layer = "floors"
+				Offset = [0, 0]
+				DamageLevels
+				[
+					{
+						File = "floor.png"
+						Size = [3, 4]
+					}
+					{
+						File = "floor_33.png"
+						Size = [3, 4]
+					}
+					{
+						File = "floor_66.png"
+						Size = [3, 4]
+					}
+				]
+			}
+			OperationalLighting
+			{
+				Layer = "lights_add"
+				Offset = [0, 0]
+				DamageLevels
+				[
+					{
+						File = "lights.png"
+						Size = [3, 4]
+					}
+				]
+			}
+			Walls
+			{
+				Layer = "walls"
+				Offset = [0, 0]
+				DamageLevels
+				[
+					{
+						File = "walls.png"
+						Size = [3, 4]
+					}
+					{
+						File = "walls_33.png"
+						Size = [3, 4]
+					}
+					{
+						File = "walls_66.png"
+						Size = [3, 4]
+					}
+				]
+			}
+			Roof
+			{
+				Layer = "roofs"
+				Offset = [0, 0]
+				DamageLevels
+				[
+					{
+						File = "roof.png"
+						Size = [3, 4]
+					}
+					{
+						File = "roof_33.png"
+						Size = [3, 4]
+					}
+					{
+						File = "roof_66.png"
+						Size = [3, 4]
+					}
+				]
+			}
+			OperationalRoofWindows
+			{
+				Layer = "roof_windows"
+				DamageLevels
+				[
+					{
+						File = "roof_windows_on.png"
+						Size = [3, 4]
+					}
+					{
+						File = "roof_windows_on_33.png"
+						Size = [3, 4]
+					}
+					{
+						File = "roof_windows_on_66.png"
+						Size = [3, 4]
+					}
+				]
+			}
+			NonOperationalRoofWindows
+			{
+				Layer = "roof_windows"
+				DamageLevels
+				[
+					{
+						File = "roof_windows_off.png"
+						Size = [3, 4]
+					}
+					{
+						File = "roof_windows_off_33.png"
+						Size = [3, 4]
+					}
+					{
+						File = "roof_windows_off_66.png"
+						Size = [3, 4]
+					}
+				]
+			}
+		}
+
+		Turret
+		{
+			Type = TurretWeapon
+			Location = [2.5, 1] // Relative to upper-left corner of unrotated part.
+			Rotation = -90d // Relative to unrotated part.
+			FireInterval = 1.2
+			FiringArc = 115d
+			RotateSpeed = 30d
+			FireThresholdAngle = 1d
+			SpawnLoc = [3, 0]
+			TargetSearchTriesPerFrame = 1
+			AIFirepowerRating = 2400
+			FireModeToggle = FireModeToggle
+
+			Emitter
+			{
+				Type = Bullet
+				Bullet = &<antimatter_bullet.txt>
+				Spread = [-4d, 4d]
+			}
+
+			BlueprintArcSprite
+			{
+				Texture = &/INDICATORS/WeaponArc
+				Size = [0, 1.5]
+				Color = [255, 0, 0, 63]
+			}
+			BlueprintArcRadius = 10
+			BlueprintArcSpriteSegments = 64
+
+			CoverageSectorArc
+			{
+				Texture = &/INDICATORS/Falloff
+				VertexColor = [255, 255, 255, 51]
+				QuadCount = 64
+			}
+		}
+
+		FireEffect
+		{
+			Type = TriggeredEffects
+			ChainedTo = Turret
+			Location = [3, 0]
+
+			MediaEffects
+			[
+				&/PARTICLES/BigCannonShoot
+				&/PARTICLES/BigCannonSmoke
+
+				: /SOUNDS/AudioExterior
+				{
+					Sound = "big_cannon_fire.wav"
+					SpeedVariation = .25
+				}
+
+				: /SHAKES/Shake
+				{
+					ShakeAmount = .075
+					Duration = .5
+				}
+			]
+		}
+
+		CrewLocation1
+		{
+			Type = CrewLocation
+			ChainedTo = Turret
+			Location = [-.35, -.7]
+			Rotation = 270d
+		}
+		CrewLocation2
+		{
+			Type = CrewLocation
+			ChainedTo = Turret
+			Location = [-.35, .8]
+			Rotation = 225d
+		}
+		PartCrew
+		{
+			Type = PartCrew
+			MinCrew = 2
+			FirstCrewJobPriority = &/TERRAN_PRIORITIES/BigCannon_FirstCrew
+			AdditionalCrewJobPriority = &/TERRAN_PRIORITIES/BigCannon_AdditionalCrew
+			FullCrewJobPriority = &/TERRAN_PRIORITIES/BigCannon_FullCrew
+			CrewDestinations
+			[
+				[.8, 1.35]
+				[2.3, 1.35]
+			]
+			CrewLocations
+			[
+				CrewLocation1
+				CrewLocation2
+			]
+		}
+
+		TurretCollider
+		{
+			Type = CircleCollider
+			ChainedTo = Turret
+			Radius = 1.155
+			Density = 1.5
+		}
+
+		TurretGraphics
+		{
+			Type = Graphics
+			ChainedTo = Turret
+			Location = [0, 0]
+			Rotation = 90d
+			Floor
+			{
+				Layer = "turrets"
+				DamageLevels
+				[
+					{
+						File = "turret floor.png"
+						Size = [3, 3]
+					}
+					{
+						File = "turret floor_33.png"
+						Size = [3, 3]
+					}
+					{
+						File = "turret floor_66.png"
+						Size = [3, 3]
+					}
+				]
+			}
+			OperationalDoodad
+			{
+				Layer = "doodads_low"
+				DamageLevels
+				[
+					{
+						AnimationFiles
+						[
+							"console on1.png"
+							"console on2.png"
+							"console on3.png"
+							"console on4.png"
+							"console on5.png"
+							"console on6.png"
+							"console on7.png"
+							"console on8.png"
+						]
+						Size = [3, 1]
+						AnimationInterval = 0.125
+					}
+				]
+			}
+			NonOperationalDoodad
+			{
+				Layer = "doodads_low"
+				DamageLevels
+				[
+					{
+						File = "console off.png"
+						Size = [3, 1]
+					}
+				]
+			}
+		}
+
+		BarrelSprite
+		{
+			Type = Sprite
+			ChainedTo = Turret
+			Location = [.5, 0]
+			Rotation = 90d
+			Layer = "weapons"
+			ResetAnimationTrigger = Turret
+			AtlasSprite
+			{
+				AnimationFiles
+				[
+					//"barrel1.png"
+					"barrel2.png"
+					"barrel3.png"
+					"barrel4.png"
+					"barrel5.png"
+					"barrel6.png"
+					"barrel7.png"
+					"barrel8.png"
+					"barrel1.png"// Loop back to beginning and clamp there.
+				]
+				Size = [3, 5]
+				AnimationInterval = 0.0625
+				AnimationStartTime = MinValue
+				ClampAnimation = true
+			}
+		}
+
+
+		OperationEffects
+		{
+			Type = OperationEffects
+			Location = [1.5, 1.5]
+			BecameOperationalMediaEffects = &/EFFECT_PREFABS/MachinesOn
+			BecameNonOperationalMediaEffects = &/EFFECT_PREFABS/MachinesOff
+		}
+
+		DestroyedEffects
+		{
+			Type = DeathEffects
+			MediaEffects = &/EFFECT_PREFABS/BigPartDestroyed
+			Location = [1.5, 1.5]
+
+			HitEffects
+			[
+				{
+					Type = PartAreaDamage
+					DamageVsOperationalPerTile = 2000
+					RadiusVsOperational = 4.5
+					DamageVsStructurePerTile = 1000
+					RadiusVsStructure = 3.5
+					Delay = .05
+					AllowFriendlyDamage = true
+				}
+				{
+					Type = AreaFires
+					FireChancePerTile = .2
+					FireRadius = 4.5
+					FireFalloff = 0
+					Delay = .05
+					AllowFriendlyFires = true
+				}
+			]
+		}
+	}
+}

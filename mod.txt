@@ -66,6 +66,8 @@ Actions
 			&<capital_shield/capital_shield.txt>/Part
 			&<booster/booster.txt>/Part
 			&<antimatter_reactor/antimatter_reactor.txt>/Part
+			&<weapons_module/weapons_module.txt>/Part
+			&<antimatter_cannon/antimatter_cannon.txt>/Part
 		]
 	}
 	{
@@ -189,6 +191,7 @@ Actions
 			Bottom = 75
 		}
 	}
+<<<<<<< HEAD
 	{
 		Action = Overrides
 		OverrideIn = "<Ships/Terran/sensor_array/sensor_array.txt>/Part/"
@@ -221,4 +224,6 @@ Actions
 			CarriedSpriteOffset = [0, .25]
 		}
 	}
+=======
+>>>>>>> 6499d96b10a51770b45b4af8461bba4dccb5cb3f
 ]
