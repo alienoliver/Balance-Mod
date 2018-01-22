@@ -106,6 +106,7 @@ Part : /BASE_PART
 			ToggleID = "fire_mode"
 			DefaultToggleValue = 0
 			ToggledOnChoices = [1]
+			AutoFire = false
 		}
 		Turret
 		{

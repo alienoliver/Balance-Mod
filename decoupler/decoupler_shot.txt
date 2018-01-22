@@ -79,6 +79,19 @@ Components
 		}
 		HitStructural
 		{
+			HitEffects
+			[
+				{
+					Type = PartDamage
+					Damage = 10000
+					AllowFriendlyDamage = true
+				}
+				{
+					Type = Impulse;
+					Impulse = 200;
+					AllowFriendlyImpulse = true
+				}
+			]
 		}
 		PenetratingOperational
 		{
