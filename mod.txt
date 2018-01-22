@@ -1,5 +1,5 @@
 Name = "Increased Design Space"
-CompatibleGameVersions = ["0.13.3"]
+CompatibleGameVersions = ["0.13.3", "0.13.4"]
 ModifiesMultiplayer = true
 Author = "Collapsible Scoot & CatThingy"
 Description = "Balances the game for flexible and more realistic ship design"
@@ -70,6 +70,7 @@ Actions
 			&<antimatter_cannon/antimatter_cannon.txt>/Part
 			&<gatling_turret/gatling_turret.txt>/Part
 			&<decoupler/decoupler.txt>/Part
+			&<napalm_bomb/napalm_bomb.txt>/Part
 		]
 	}
 	{

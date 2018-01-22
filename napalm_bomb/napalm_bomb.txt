@@ -1,0 +1,145 @@
+Part : /BASE_PART
+{
+	NameKey = "Parts/NapalmBomb"
+	IconNameKey = "Parts/NapalmBombIcon"
+	IDString = napalm_bomb
+	EditorGroup = "Misc"
+	DescriptionKey = "Parts/NapalmBombDesc"
+	Cost = 1000
+	Size = [1, 1]
+	SelectionTypeID = "armor"
+	MaxHealth = 1
+	AreaDamageBlockFactor = 0
+	Flammable = false
+	CreatePartPerTileWhenGrabbed = ""
+	CreatePartPerTileWhenDestroyed = ""
+	CrewSpeedFactor = 0
+	Density = 1
+	PenetrationResistance = 1;
+	IsRotateable = true
+	IsWalled = true
+	AllowedDoorLocations = []
+	GeneratorRequiresDoor = false
+	IgnoreRotationForMirroredSelection = true
+	EditorIcon
+	{
+		Texture
+		{
+			File = "icon.png"
+			SampleMode = Linear
+		}
+		Size = [32, 32]
+	}
+	BlueprintSprites
+	[
+		{
+			File = "blueprints.png"
+			Size = [1, 1]
+		}
+	]
+	Components
+	{
+		Graphics
+		{
+			Type = Graphics
+			Location = [0.5, 0.5]
+			Floor // This is needed so that armor shows up in ship ghosts.
+			{
+				Layer = "floors"
+				DamageLevels
+				[
+					{
+						File = "armor.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			Walls
+			{
+				Layer = "walls"
+				DamageLevels
+				[
+					{
+						File = "armor.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			Roof
+			{
+				Layer = "roofs"
+				DamageLevels
+				[
+					{
+						File = "roof.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+		}
+		FireModeToggle
+		{
+			Type = UIToggle
+			ToggleID = "on_off"
+			DefaultToggleValue = 0
+			RequiredForWholePartOperation = true
+			ToggledOnChoices = [1]
+			AutoFire = true
+		}
+
+		Turret
+		{
+			Type = TurretWeapon
+			Location = [0, 0] // Relative to upper-left corner of unrotated part.
+			Rotation = -90d // Relative to unrotated part.
+			FireInterval = 10
+			FiringArc = 360d
+			RotateSpeed = 360d
+			FireThresholdAngle = 1d
+			SpawnLoc = [0, 0]
+			TargetSearchTriesPerFrame = 1
+			AIFirepowerRating = 0
+			Emitter
+			{
+				Type = Bullet
+				Bullet = &<napalm_bomb_shot.txt>
+				Spread = [0d, 0d]
+			}
+		}
+		DestroyedEffects
+		{
+			Type = DeathEffects
+			MediaEffects = &/EFFECT_PREFABS/SmallPartDestroyedDry
+			Location = [.5, .5]
+			HitEffects
+				[
+					{
+						Type = PartAreaDamage
+						DamageVsOperationalPerTile = 1000
+						RadiusVsOperational = 4
+						DamageVsStructurePerTile = 500
+						RadiusVsStructure = 3
+						Delay = .05
+						AllowFriendlyDamage = true
+					}
+					{
+						Type = AreaFires
+						FireChancePerTile = 1
+						FireRadius = 8
+						FireFalloff = 0
+						Delay = .05
+						AllowFriendlyFires = true
+					}
+				]
+
+		}
+	}
+}
