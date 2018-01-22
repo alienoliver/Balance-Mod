@@ -12,6 +12,7 @@ Part : /BASE_PART
 	AreaDamageBlockFactor = 0
 	Flammable = false
 	CreatePartPerTileWhenGrabbed = ""
+	CreatePartPerTileWhenDestroyed = ""
 	CrewSpeedFactor = 0
 	Density = 1
 	PenetrationResistance = 1;
@@ -107,7 +108,7 @@ Part : /BASE_PART
 			DefaultToggleValue = 0
 			RequiredForWholePartOperation = true
 			ToggledOnChoices = [1]
-			AutoFire = false
+			AutoFire = true
 		}
 
 		Turret
