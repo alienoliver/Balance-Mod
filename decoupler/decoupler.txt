@@ -103,10 +103,12 @@ Part : /BASE_PART
 		FireModeToggle
 		{
 			Type = UIToggle
-			ToggleID = "fire_mode"
+			ToggleID = "on_off"
 			DefaultToggleValue = 0
+			RequiredForWholePartOperation = true
 			ToggledOnChoices = [1]
 		}
+
 		Turret
 		{
 			Type = TurretWeapon
