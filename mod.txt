@@ -69,6 +69,7 @@ Actions
 			&<weapons_module/weapons_module.txt>/Part
 			&<antimatter_cannon/antimatter_cannon.txt>/Part
 			&<gatling_turret/gatling_turret.txt>/Part
+			&<decoupler/decoupler.txt>/Part
 		]
 	}
 	{

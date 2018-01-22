@@ -27,6 +27,10 @@ Parts
 	GatlingTurret = "Gatling Turret"
 	GatlingTurretIcon = "Gatling Turret"
 	GatlingTurretDesc = "Powerful short-range weapon for fighters."
+
+	Decoupler = "Decoupler"
+	DecouplerIcon = "Decoupler"
+	DecouplerDesc = "A part which sepeartes ships from each other when instucted to attack an enemy"
 }
 Hud
 {
