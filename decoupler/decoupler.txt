@@ -107,6 +107,7 @@ Part : /BASE_PART
 			DefaultToggleValue = 0
 			RequiredForWholePartOperation = true
 			ToggledOnChoices = [1]
+			AutoFire = false
 		}
 
 		Turret
