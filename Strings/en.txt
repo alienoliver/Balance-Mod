@@ -1,4 +1,4 @@
-Parts
+﻿Parts
 {
 	HugeThruster = "Huge Thruster"
 	HugeThrusterIcon = "Huge Thruster"
@@ -35,6 +35,10 @@ Parts
 	NapalmBomb = "Napalm Bomb"
 	NapalmBombIcon = "Napalm Bomb"
 	NapalmBombDesc = "A specialized bomb designed to cause fires within enemy ships."
+
+	FighterCockpit = "Fighter Cockpit"
+	FighterCockpitIcon = "Fighter Cockpit"
+	FighterCockpitDesc = "A small cockpit for fighters"
 }
 Hud
 {

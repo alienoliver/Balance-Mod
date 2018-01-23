@@ -1,0 +1,329 @@
+Part : /BASE_PART
+{
+	NameKey = "Parts/FighterCockpit"
+	IconNameKey = "Parts/FighterCockpitIcon"
+	IDString = fighter_cockpit
+	EditorGroup = "Flight"
+	DescriptionKey = "Parts/FighterCockpitDesc"
+	Cost = 5000
+	AIValue = 50
+	Size = [1, 1]
+	SelectionPriority = 0
+	MaxHealth = 1000
+	PenetrationResistance = 1
+	IsContiguityOrigin = true
+	TypeCategories = [command]
+	AllowedDoorLocations
+	[
+		[0,1]
+	]
+	RequiresCategories = []
+	EditorIcon
+	{
+		Texture
+		{
+			File = "icon.png"
+			SampleMode = Linear
+		}
+		Size = [64, 64]
+	}
+	BlueprintSprites
+	[
+		{
+			File = "blueprints.png"
+			Size = [1, 1]
+		}
+	]
+	PowerUIStats
+	{
+		Min = .02
+		Ideal = .02
+	}
+	CrewUIStats
+	{
+		Min = 1
+		Ideal = 1
+	}
+	Components
+	{
+		Sensor
+		{
+			Type = Sensor
+			SightRadius = 100
+		}
+
+		BatteryStorage
+		{
+			Type = AmmoConsumer
+			AmmoType = battery
+			MaxAmmo = 1000
+			LowConsumeJobPriority = &/TERRAN_PRIORITIES/Cockpit_LowConsume
+			HighConsumeJobPriority = &/TERRAN_PRIORITIES/Cockpit_HighConsume
+			EmptyConsumeJobPriority = &/TERRAN_PRIORITIES/Cockpit_EmptyConsume
+			JobUnassignThreshold = 1000000// Effectively unassignable.
+			ResupplyThreshold = 500
+			RequiredForWholePartOperation = true
+
+			ReceiveAmmoMediaEffects = &/EFFECT_PREFABS/PowerDeliver
+		}
+
+		PowerDrain
+		{
+			Type = AmmoConverter
+			FromStorage = BatteryStorage
+			FromQuantity = 600
+			Interval = 30
+		}
+
+		CrewLocation
+		{
+			Type = CrewLocation
+			Location = [0.5, 0.5]
+			Rotation = 180d
+		}
+		PartCrew
+		{
+			Type = PartCrew
+			MinCrew = 1
+			FirstCrewJobPriority = &/TERRAN_PRIORITIES/Cockpit_FirstCrew
+			AdditionalCrewJobPriority = &/TERRAN_PRIORITIES/Cockpit_AdditionalCrew
+			FullCrewJobPriority = &/TERRAN_PRIORITIES/Cockpit_FullCrew
+			PrerequisitesBeforeCrewing = [BatteryStorage]
+			AbandonWhenOnFire = false
+			CrewDestinations
+			[
+				[0.5, 0.5]
+			]
+			CrewLocations
+			[
+				CrewLocation
+			]
+		}
+
+		Graphics
+		{
+			Type = Graphics
+			Location = [0.5, 0.5]
+			Floor
+			{
+				Layer = "floors"
+				DamageLevels
+				[
+					{
+						File = "floor.png"
+						Size = [1, 1]
+					}
+					{
+						File = "floor_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "floor_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			OperationalDoodad
+			{
+				Layer = "doodads_low"
+				DamageLevels
+				[
+					{
+						AnimationFiles
+						[
+							"doodads on1.png"
+							"doodads on2.png"
+							"doodads on3.png"
+							"doodads on4.png"
+							"doodads on5.png"
+							"doodads on6.png"
+							"doodads on7.png"
+							"doodads on8.png"
+							"doodads on9.png"
+							"doodads on10.png"
+							"doodads on11.png"
+							"doodads on12.png"
+						]
+						Size = [1, 1]
+						AnimationInterval = 0.125
+					}
+				]
+			}
+			NonOperationalDoodad
+			{
+				Layer = "doodads_low"
+				DamageLevels
+				[
+					{
+						File = "doodads off.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			OperationalLighting
+			{
+				Layer = "lights_add"
+				DamageLevels
+				[
+					{
+						File = "lights.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			Walls
+			{
+				Layer = "walls"
+				DamageLevels
+				[
+					{
+						File = "walls.png"
+						Size = [1, 1]
+					}
+					{
+						File = "walls_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "walls_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			Roof
+			{
+				Layer = "roofs"
+				DamageLevels
+				[
+					{
+						File = "roof.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			OperationalRoofWindows
+			{
+				Layer = "roof_windows"
+				DamageLevels
+				[
+					{
+						File = "roof_windows_on.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_windows_on_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_windows_on_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			NonOperationalRoofWindows
+			{
+				Layer = "roof_windows"
+				DamageLevels
+				[
+					{
+						File = "roof_windows_off.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_windows_off_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_windows_off_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+		}
+
+		BatterySprites
+		{
+			Type = AmmoSprites
+			Location = [0.5, 0.5]
+			AmmoStorage = BatteryStorage
+			Layer = "doodads_high"
+			AmmoLevels
+			[
+				{
+					File = "batteries 1.png"
+					Size = [1, 1]
+				}
+			]
+		}
+
+		OperationEffects
+		{
+			Type = OperationEffects
+			Location = [0.5, 0.5]
+			BecameOperationalMediaEffects = &/EFFECT_PREFABS/PowerOn
+			BecameNonOperationalMediaEffects = &/EFFECT_PREFABS/PowerOff
+		}
+
+		DestroyedEffects
+		{
+			Type = DeathEffects
+			MediaEffects = &/EFFECT_PREFABS/MedPartDestroyed
+			Location = [0.5, 0.5]
+		}
+
+		OperationSoundLoop
+		{
+			Type = ContinuousEffects
+			Location = [0.5, 0.5]
+			OnlyWhenOperational = true
+			MediaEffects
+			[
+				: /SOUNDS/AudioInterior
+				{
+					Sound = "cockpit_operating.wav"
+					Volume = .15
+					MaxConcurrentVolume = .3
+					Speed = .75
+					MaxConcurrent = 1
+				}
+			]
+		}
+
+		Indicators
+		{
+			Type = IndicatorSprites
+			Location = [0.5, 0.5]
+			Layer = "indicators"
+			Indicators
+			[
+				// Out of power.
+				{
+					Source = BatteryStorage
+					AtlasSprite
+					{
+						File = &/INDICATORS/NoPower
+						Size = [0.75, 0.75]
+					}
+				}
+
+				// No crew.
+				{
+					Source = PartCrew
+					AtlasSprite
+					{
+						File = &/INDICATORS/NoCrew
+						Size = [0.75, 0.75]
+					}
+				}
+			]
+		}
+	}
+}
