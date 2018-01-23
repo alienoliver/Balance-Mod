@@ -7,7 +7,7 @@ Part : /BASE_PART
 	DescriptionKey = "Parts/DecouplerDesc"
 	Cost = 0
 	Size = [1, 1]
-	SelectionTypeID = "armor"
+	SelectionTypeID = "decoupler"
 	MaxHealth = 1
 	AreaDamageBlockFactor = 0
 	Flammable = false
@@ -116,7 +116,7 @@ Part : /BASE_PART
 			Type = TurretWeapon
 			Location = [0, 0] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
-			FireInterval = 10
+			FireInterval = 0.01
 			FiringArc = 360d
 			RotateSpeed = 360d
 			FireThresholdAngle = 1d
