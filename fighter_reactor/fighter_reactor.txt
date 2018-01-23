@@ -217,11 +217,11 @@ Part : /BASE_PART
 					Size = [1, 1]
 				}
 				{
-					File = "reactor5.png"
+					File = "reactor1.png"
 					Size = [1, 1]
 				}
 				{
-					File = "reactor8.png"
+					File = "reactor2.png"
 					Size = [1, 1]
 				}
 			]
