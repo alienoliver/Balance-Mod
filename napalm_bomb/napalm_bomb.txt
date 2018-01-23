@@ -49,7 +49,7 @@ Part : /BASE_PART
 				DamageLevels
 				[
 					{
-						File = "armor.png"
+						File = "napalm_bomb.png"
 						Size = [1, 1]
 					}
 				]
@@ -60,7 +60,7 @@ Part : /BASE_PART
 				DamageLevels
 				[
 					{
-						File = "armor.png"
+						File = "napalm_bomb.png"
 						Size = [1, 1]
 					}
 				]
@@ -72,14 +72,6 @@ Part : /BASE_PART
 				[
 					{
 						File = "roof.png"
-						Size = [1, 1]
-					}
-					{
-						File = "roof_33.png"
-						Size = [1, 1]
-					}
-					{
-						File = "roof_66.png"
 						Size = [1, 1]
 					}
 				]
