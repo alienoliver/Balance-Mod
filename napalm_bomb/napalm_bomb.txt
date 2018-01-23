@@ -84,7 +84,6 @@ Part : /BASE_PART
 			DefaultToggleValue = 0
 			RequiredForWholePartOperation = true
 			ToggledOnChoices = [1]
-			AutoFire = true
 		}
 
 		Turret
@@ -99,6 +98,7 @@ Part : /BASE_PART
 			SpawnLoc = [0, 0]
 			TargetSearchTriesPerFrame = 1
 			AIFirepowerRating = 0
+			AutoFire = true
 			Emitter
 			{
 				Type = Bullet
