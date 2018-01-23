@@ -72,6 +72,7 @@ Actions
 			&<decoupler/decoupler.txt>/Part
 			&<napalm_bomb/napalm_bomb.txt>/Part
 			&<fighter_cockpit/fighter_cockpit.txt>/Part
+			&<fighter_reactor/fighter_reactor.txt>/Part
 		]
 	}
 	{

@@ -1,0 +1,283 @@
+Part : /BASE_PART
+{
+	NameKey = "Parts/FighterReactor"
+	IconNameKey = "Parts/FighterReactorIcon"
+	IDString = fighter_reactor
+	EditorGroup = "Power"
+	DescriptionKey = "Parts/FighterReactorDesc"
+	Cost = 5000
+	AIValue = 50
+	Size = [1, 1]
+	SelectionPriority = 0
+	MaxHealth = 1000
+	PenetrationResistance = 1
+	AutoDoorMaxPathLength = 5
+	TypeCategories = [power, reactor]
+	CreatePartPerTileWhenDestroyed = ""
+	IgnoreRotationForMirroredSelection = true
+	EditorIcon
+	{
+		Texture
+		{
+			File = "icon.png"
+			SampleMode = Linear
+		}
+		Size = [64, 64]
+	}
+	BlueprintSprites
+	[
+		{
+			File = "blueprints.png"
+			Size = [1, 1]
+		}
+	]
+	PowerUIStats
+	{
+		Provided = 8
+	}
+	Components
+	{
+		BatteryStorage
+		{
+			Type = AmmoStorage
+			AmmoType = battery
+			MaxAmmo = 2000
+			StartingAmmo = &MaxAmmo
+			SuppliesAmmo = true
+			MaxIndicatorAmmo = 1000
+			AssumeAlwaysHasAmmo = true
+			WaitPerDistToNextClosest = .5
+		}
+		BatteryProducer
+		{
+			Type = AmmoConverter
+			ToStorage = BatteryStorage
+			ToQuantity = 1000
+			Interval = .55
+		}
+
+		Graphics
+		{
+			Type = Graphics
+			Location = [0.5, 0.5]
+			Floor
+			{
+				Layer = "floors"
+				DamageLevels
+				[
+					{
+						File = "floor.png"
+						Size = [1, 1]
+					}
+					{
+						File = "floor_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "floor_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			OperationalLighting
+			{
+				Layer = "lights_add"
+				DamageLevels
+				[
+					{
+						AnimationFiles
+						[
+							"lights1.png"
+							"lights2.png"
+							"lights3.png"
+							"lights4.png"
+							"lights5.png"
+							"lights6.png"
+							"lights7.png"
+							"lights8.png"
+						]
+						Size = [1, 1]
+						AnimationInterval = 0.05
+					}
+				]
+			}
+			Walls
+			{
+				Layer = "walls"
+				DamageLevels
+				[
+					{
+						File = "walls.png"
+						Size = [1, 1]
+					}
+					{
+						File = "walls_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "walls_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			Roof
+			{
+				Layer = "roofs"
+				DamageLevels
+				[
+					{
+						File = "roof.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+			OperationalRoofDoodad
+			{
+				Layer = "roof_doodads"
+				DamageLevels
+				[
+					{
+						AnimationFiles
+						[
+							"roof_doodads1.png"
+							"roof_doodads2.png"
+							"roof_doodads3.png"
+							"roof_doodads4.png"
+							"roof_doodads5.png"
+							"roof_doodads6.png"
+							"roof_doodads7.png"
+							"roof_doodads8.png"
+						]
+						Size = [1, 1]
+						AnimationInterval = 0.1
+					}
+				]
+			}
+			OperationalRoofWindows
+			{
+				Layer = "roof_windows"
+				DamageLevels
+				[
+					{
+						File = "roof_windows.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_windows_33.png"
+						Size = [1, 1]
+					}
+					{
+						File = "roof_windows_66.png"
+						Size = [1, 1]
+					}
+				]
+			}
+		}
+
+		ReactorHum
+		{
+			Type = ContinuousEffects
+			Location = [0.5, 0.5]
+			OnlyWhenOperational = true
+			MediaEffects
+			[
+				: /SOUNDS/AudioInterior
+				{
+					Sound = "reactor_operating.wav"
+					Volume = .5
+					Speed = .5
+					MaxConcurrent = 1
+					DynamicVolume : ^/0/DynamicVolume
+					{
+						ExteriorVolume = .5
+					}
+				}
+			]
+		}
+
+		BatterySprites
+		{
+			Type = AmmoSprites
+			Location = [0.5, 0.5]
+			AmmoStorage = BatteryStorage
+			Layer = "doodads_high"
+			HasZeroAmmoSprite = true
+			AmmoLevels
+			[
+				{
+					File = "reactor0.png"
+					Size = [1, 1]
+				}
+				{
+					File = "reactor5.png"
+					Size = [1, 1]
+				}
+				{
+					File = "reactor8.png"
+					Size = [1, 1]
+				}
+			]
+		}
+
+		DestroyedEffects
+		{
+			Type = DeathEffects
+			MediaEffects = &/EFFECT_PREFABS/ReactorDestroyed
+			Location = [0.5, 0.5]
+
+			HitEffects
+			[
+				{
+					Type = PartAreaDamage
+					DamageVsOperationalPerTile = 4000
+					RadiusVsOperational = 6
+					DamageVsStructurePerTile = 2000
+					RadiusVsStructure = 4
+					Delay = .05
+					AllowFriendlyDamage = true
+				}
+				{
+					Type = AreaFires
+					FireChancePerTile = .5
+					FireRadius = 6
+					FireFalloff = 0
+					Delay = .05
+					AllowFriendlyFires = true
+				}
+				{
+					Type = AreaImpulse
+					ImpulsePerTile = 10
+					ImpulseRadius = 10
+					Delay = .05
+				}
+			]
+		}
+
+		Indicators
+		{
+			Type = IndicatorSprites
+			Location = [0.5, 0.5]
+			Layer = "indicators"
+			Indicators
+			[
+				// Out of power.
+				{
+					Source = BatteryStorage
+					AtlasSprite
+					{
+						File = &/INDICATORS/NoPower
+						Size = [0.75, 0.75]
+					}
+				}
+			]
+		}
+	}
+}

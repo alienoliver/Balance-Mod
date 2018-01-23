@@ -227,7 +227,7 @@ Part : /BASE_PART
 			FireThresholdAngle = 1d
 			SpawnLoc = [0.6875, 0]
 			AmmoStorage = BatteryStorage
-			AmmoUsed = 100
+			AmmoUsed = 50
 			TargetSearchTriesPerFrame = 1
 			AIFirepowerRating = 1000
 			FireModeToggle = FireModeToggle

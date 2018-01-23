@@ -38,7 +38,11 @@
 
 	FighterCockpit = "Fighter Cockpit"
 	FighterCockpitIcon = "Fighter Cockpit"
-	FighterCockpitDesc = "A small cockpit for fighters"
+	FighterCockpitDesc = "A small cockpit for fighters."
+
+	FighterReactor = "Fighter Reactor"
+	FighterReactorIcon = "Fighter Reactor"
+	FighterReactorDesc = "A small reactor for fighters."
 }
 Hud
 {
