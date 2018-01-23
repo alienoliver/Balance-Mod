@@ -9,7 +9,7 @@ Part : /BASE_PART
 	Size = [1, 1]
 	SelectionTypeID = "armor"
 	MaxHealth = 1
-	AreaDamageBlockFactor = 100
+	AreaDamageBlockFactor = 0
 	Flammable = false
 	CreatePartPerTileWhenGrabbed = ""
 	CreatePartPerTileWhenDestroyed = ""
@@ -135,27 +135,6 @@ Part : /BASE_PART
 			Type = DeathEffects
 			MediaEffects = &/EFFECT_PREFABS/SmallPartDestroyedDry
 			Location = [.5, .5]
-			 HitEffects
-			[
-				{
-					Type = PartAreaDamage
-					DamageVsOperationalPerTile = 2000
-					RadiusVsOperational = 4
-					DamageVsStructurePerTile = 1000
-					RadiusVsStructure = 3
-					Delay = .05
-					AllowFriendlyDamage = true
-				}
-				{
-					Type = AreaFires
-					FireChancePerTile = .25
-					FireRadius = 4
-					FireFalloff = 0
-					Delay = .05
-					AllowFriendlyFires = true
-				}
-			]
-
 		}
 	}
 }

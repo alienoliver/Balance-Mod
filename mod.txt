@@ -9,17 +9,17 @@ Actions
 	{
 		Action = Replace
 		Replace = "<Ships/Terran/big_thruster/big_thruster.txt>/Part/ProhibitBelow"
-		With = 30
-	}
-	{
-		Action = Replace
-		Replace = "<Ships/Terran/med_thruster/med_thruster.txt>/Part/ProhibitBelow"
 		With = 20
 	}
 	{
 		Action = Replace
-		Replace = "<Ships/Terran/small_thruster/small_thruster.txt>/Part/ProhibitBelow"
+		Replace = "<Ships/Terran/med_thruster/med_thruster.txt>/Part/ProhibitBelow"
 		With = 10
+	}
+	{
+		Action = Replace
+		Replace = "<Ships/Terran/small_thruster/small_thruster.txt>/Part/ProhibitBelow"
+		With = 5
 	}
 	{
 		Action = Replace

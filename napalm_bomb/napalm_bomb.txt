@@ -3,7 +3,7 @@ Part : /BASE_PART
 	NameKey = "Parts/NapalmBomb"
 	IconNameKey = "Parts/NapalmBombIcon"
 	IDString = napalm_bomb
-	EditorGroup = "Misc"
+	EditorGroup = "Weapons"
 	DescriptionKey = "Parts/NapalmBombDesc"
 	Cost = 1000
 	Size = [1, 1]
@@ -132,7 +132,7 @@ Part : /BASE_PART
 					}
 					{
 						Type = AreaFires
-						FireChancePerTile = 1
+						FireChancePerTile = 0.5
 						FireRadius = 8
 						FireFalloff = 0
 						Delay = .05
