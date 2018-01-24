@@ -1,13 +1,13 @@
 Part : /BASE_PART
 {
-	NameKey = "Parts/Decoupler"
-	IconNameKey = "Parts/DecouplerIcon"
-	IDString = decoupler
-	EditorGroup = "Misc"
-	DescriptionKey = "Parts/DecouplerDesc"
-	Cost = 0
+	NameKey = "Parts/ExplosiveBomb"
+	IconNameKey = "Parts/ExplosiveBombIcon"
+	IDString = explosive_bomb
+	EditorGroup = "Weapons"
+	DescriptionKey = "Parts/ExplosiveBombDesc"
+	Cost = 1500
 	Size = [1, 1]
-	SelectionTypeID = "decoupler"
+	SelectionTypeID = "explosive"
 	MaxHealth = 1
 	AreaDamageBlockFactor = 0
 	Flammable = false
@@ -49,7 +49,7 @@ Part : /BASE_PART
 				DamageLevels
 				[
 					{
-						File = "decoupler.png"
+						File = "explosive_bomb.png"
 						Size = [1, 1]
 					}
 				]
@@ -60,7 +60,7 @@ Part : /BASE_PART
 				DamageLevels
 				[
 					{
-						File = "decoupler.png"
+						File = "explosive_bomb.png"
 						Size = [1, 1]
 					}
 				]
@@ -71,7 +71,7 @@ Part : /BASE_PART
 				DamageLevels
 				[
 					{
-						File = "decoupler.png"
+						File = "roof.png"
 						Size = [1, 1]
 					}
 				]
@@ -91,7 +91,7 @@ Part : /BASE_PART
 			Type = TurretWeapon
 			Location = [0.5, 0.5] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
-			FireInterval = 0.01
+			FireInterval = 10
 			FiringArc = 360d
 			RotateSpeed = 360d
 			FireThresholdAngle = 1d
@@ -102,7 +102,7 @@ Part : /BASE_PART
 			Emitter
 			{
 				Type = Bullet
-				Bullet = &<decoupler_shot.txt>
+				Bullet = &<explosive_bomb_shot.txt>
 				Spread = [0d, 0d]
 			}
 		}
@@ -111,6 +111,27 @@ Part : /BASE_PART
 			Type = DeathEffects
 			MediaEffects = &/EFFECT_PREFABS/SmallPartDestroyedDry
 			Location = [.5, .5]
+			HitEffects
+				[
+					{
+						Type = PartAreaDamage
+						DamageVsOperationalPerTile = 12000
+						RadiusVsOperational = 7
+						DamageVsStructurePerTile = 12000
+						RadiusVsStructure = 7
+						Delay = .05
+						AllowFriendlyDamage = true
+					}
+					{
+						Type = AreaFires
+						FireChancePerTile = 0.25
+						FireRadius = 7
+						FireFalloff = 0
+						Delay = .05
+						AllowFriendlyFires = true
+					}
+				]
+
 		}
 	}
 }

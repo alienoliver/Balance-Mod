@@ -1,4 +1,4 @@
-ID = napalm_bullet
+ID = explosive_bullet
 Range = 100000
 IdealRange = -1
 Speed = 0.1
@@ -68,7 +68,7 @@ Components
 				}
 				{
 					Type = Impulse;
-					Impulse = 50;
+					Impulse = 300;
 					AllowFriendlyImpulse = true
 				}
 			]
@@ -88,7 +88,7 @@ Components
 				}
 				{
 					Type = Impulse;
-					Impulse = 50;
+					Impulse = 300;
 					AllowFriendlyImpulse = true
 				}
 			]

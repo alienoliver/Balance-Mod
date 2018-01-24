@@ -7,7 +7,7 @@ Part : /BASE_PART
 	DescriptionKey = "Parts/NapalmBombDesc"
 	Cost = 1000
 	Size = [1, 1]
-	SelectionTypeID = "armor"
+	SelectionTypeID = "napalm"
 	MaxHealth = 1
 	AreaDamageBlockFactor = 0
 	Flammable = false
@@ -89,13 +89,13 @@ Part : /BASE_PART
 		Turret
 		{
 			Type = TurretWeapon
-			Location = [0, 0] // Relative to upper-left corner of unrotated part.
+			Location = [0.5, 0.5] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
 			FireInterval = 10
 			FiringArc = 360d
 			RotateSpeed = 360d
 			FireThresholdAngle = 1d
-			SpawnLoc = [0, 0]
+			SpawnLoc = [0.5, 0.5]
 			TargetSearchTriesPerFrame = 1
 			AIFirepowerRating = 0
 			AutoFire = true
@@ -115,9 +115,9 @@ Part : /BASE_PART
 				[
 					{
 						Type = PartAreaDamage
-						DamageVsOperationalPerTile = 1000
+						DamageVsOperationalPerTile = 500
 						RadiusVsOperational = 4
-						DamageVsStructurePerTile = 500
+						DamageVsStructurePerTile = 250
 						RadiusVsStructure = 3
 						Delay = .05
 						AllowFriendlyDamage = true

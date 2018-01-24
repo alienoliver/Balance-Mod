@@ -43,6 +43,10 @@
 	FighterReactor = "Fighter Reactor"
 	FighterReactorIcon = "Fighter Reactor"
 	FighterReactorDesc = "A small reactor for fighters."
+
+	ExplosiveBomb = "Explosive Bomb"
+	ExplosiveBombIcon = "Explosive Bomb"
+	ExplosiveBombDesc = "A rudimentary bomb designed to explode causing great damage to enemy ships."
 }
 Hud
 {

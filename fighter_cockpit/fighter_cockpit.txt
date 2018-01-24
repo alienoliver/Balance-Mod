@@ -7,7 +7,7 @@ Part : /BASE_PART
 	DescriptionKey = "Parts/FighterCockpitDesc"
 	Cost = 5000
 	AIValue = 50
-	Size = [1, 1]
+	Size = [1, 2]
 	SelectionPriority = 0
 	MaxHealth = 1000
 	PenetrationResistance = 1
@@ -15,7 +15,9 @@ Part : /BASE_PART
 	TypeCategories = [command]
 	AllowedDoorLocations
 	[
-		[0,1]
+		[0, 2]
+		[-1, 1]
+		[1, 1]
 	]
 	RequiresCategories = []
 	EditorIcon
@@ -31,7 +33,7 @@ Part : /BASE_PART
 	[
 		{
 			File = "blueprints.png"
-			Size = [1, 1]
+			Size = [1, 2]
 		}
 	]
 	PowerUIStats
@@ -78,7 +80,7 @@ Part : /BASE_PART
 		CrewLocation
 		{
 			Type = CrewLocation
-			Location = [0.5, 0.5]
+			Location = [0.5, 1]
 			Rotation = 180d
 		}
 		PartCrew
@@ -92,7 +94,7 @@ Part : /BASE_PART
 			AbandonWhenOnFire = false
 			CrewDestinations
 			[
-				[0.5, 0.5]
+				[0.5, 1]
 			]
 			CrewLocations
 			[
@@ -103,7 +105,7 @@ Part : /BASE_PART
 		Graphics
 		{
 			Type = Graphics
-			Location = [0.5, 0.5]
+			Location = [0.5, 1]
 			Floor
 			{
 				Layer = "floors"
@@ -111,15 +113,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "floor.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "floor_33.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "floor_66.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 				]
 			}
@@ -144,7 +146,7 @@ Part : /BASE_PART
 							"doodads on11.png"
 							"doodads on12.png"
 						]
-						Size = [1, 1]
+						Size = [1, 2]
 						AnimationInterval = 0.125
 					}
 				]
@@ -156,7 +158,7 @@ Part : /BASE_PART
 				[
 					{
 						File = "doodads off.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 				]
 			}
@@ -167,7 +169,7 @@ Part : /BASE_PART
 				[
 					{
 						File = "lights.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 				]
 			}
@@ -178,15 +180,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "walls.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "walls_33.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "walls_66.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 				]
 			}
@@ -197,15 +199,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "roof.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "roof_33.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "roof_66.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 				]
 			}
@@ -216,15 +218,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "roof_windows_on.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "roof_windows_on_33.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "roof_windows_on_66.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 				]
 			}
@@ -235,15 +237,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "roof_windows_off.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "roof_windows_off_33.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 					{
 						File = "roof_windows_off_66.png"
-						Size = [1, 1]
+						Size = [1, 2]
 					}
 				]
 			}
@@ -252,14 +254,14 @@ Part : /BASE_PART
 		BatterySprites
 		{
 			Type = AmmoSprites
-			Location = [0.5, 0.5]
+			Location = [0.5, 1]
 			AmmoStorage = BatteryStorage
 			Layer = "doodads_high"
 			AmmoLevels
 			[
 				{
 					File = "batteries 1.png"
-					Size = [1, 1]
+					Size = [1, 2]
 				}
 			]
 		}
@@ -267,7 +269,7 @@ Part : /BASE_PART
 		OperationEffects
 		{
 			Type = OperationEffects
-			Location = [0.5, 0.5]
+			Location = [0.5, 1]
 			BecameOperationalMediaEffects = &/EFFECT_PREFABS/PowerOn
 			BecameNonOperationalMediaEffects = &/EFFECT_PREFABS/PowerOff
 		}
@@ -276,13 +278,13 @@ Part : /BASE_PART
 		{
 			Type = DeathEffects
 			MediaEffects = &/EFFECT_PREFABS/MedPartDestroyed
-			Location = [0.5, 0.5]
+			Location = [0.5, 1]
 		}
 
 		OperationSoundLoop
 		{
 			Type = ContinuousEffects
-			Location = [0.5, 0.5]
+			Location = [0.5, 1]
 			OnlyWhenOperational = true
 			MediaEffects
 			[
@@ -300,7 +302,7 @@ Part : /BASE_PART
 		Indicators
 		{
 			Type = IndicatorSprites
-			Location = [0.5, 0.5]
+			Location = [0.5, 1]
 			Layer = "indicators"
 			Indicators
 			[
@@ -310,7 +312,7 @@ Part : /BASE_PART
 					AtlasSprite
 					{
 						File = &/INDICATORS/NoPower
-						Size = [0.75, 0.75]
+						Size = [0.75, 1.5]
 					}
 				}
 
@@ -320,7 +322,7 @@ Part : /BASE_PART
 					AtlasSprite
 					{
 						File = &/INDICATORS/NoCrew
-						Size = [0.75, 0.75]
+						Size = [0.75, 1.5]
 					}
 				}
 			]
