@@ -91,7 +91,7 @@ Part : /BASE_PART
 			Type = TurretWeapon
 			Location = [0.5, 0.5] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
-			FireInterval = 10
+			FireInterval = 0.1
 			FiringArc = 360d
 			RotateSpeed = 360d
 			FireThresholdAngle = 1d
@@ -103,7 +103,7 @@ Part : /BASE_PART
 			{
 				Type = Bullet
 				Bullet = &<explosive_bomb_shot.txt>
-				Spread = [0d, 0d]
+				Spread = [180d, 180d]
 			}
 		}
 		DestroyedEffects
