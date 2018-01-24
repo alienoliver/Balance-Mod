@@ -1,0 +1,109 @@
+ID = explosive_bullet
+Range = 100000
+IdealRange = -1
+Speed = 0.1
+
+Components
+{
+	Physics
+	{
+		Type = CirclePhysics
+		Radius = 0.01
+		Density = 0.1
+	}
+
+	Death
+	{
+		Type = DeathByLifetime
+		// Lifetime will be auto-calculated based on range and speed.
+	}
+
+	Sprite
+	{
+		Type = AnimatedSprite
+		Animation
+		{
+			AtlasSprite
+			{
+				Texture
+				{
+					File = "med bullet.png" // Just re-use the medium cannon's bullet.
+					SampleMode = Linear
+					MipLevels = max
+				}
+				Size = [3, 3]
+			}
+			FrameCount = 16
+			FrameSize = [128, 128]
+			FramesPerRow = 4
+			FramesPerSecond = 60
+		}
+	}
+
+	MediaEffects
+	{
+		Type = MediaEffects
+		InheritShooterVelocityFrom = Physics
+		MediaEffects
+		[
+		]
+	}
+
+	Hit
+	{
+		Type = PenetratingHit
+		PhysicsComponent = Physics
+
+		HitShield
+		{
+		}
+		HitOperational
+		{
+			HitEffects
+			[
+				{
+					Type = PartDamage
+					Damage = 10000
+					AllowFriendlyDamage = true
+				}
+				{
+					Type = Impulse;
+					Impulse = 1500;
+					AllowFriendlyImpulse = true
+				}
+			]
+
+			MediaEffects
+			[
+			]
+		}
+		HitStructural
+		{
+			HitEffects
+			[
+				{
+					Type = PartDamage
+					Damage = 10000
+					AllowFriendlyDamage = true
+				}
+				{
+					Type = Impulse;
+					Impulse = 1500;
+					AllowFriendlyImpulse = true
+				}
+			]
+		}
+		PenetratingOperational
+		{
+		}
+		PenetratingStructural
+		{
+		}
+		FinishedPenetratingOperational
+		{
+		}
+		FinishedPenetratingStructural
+		{
+		}
+	}
+}

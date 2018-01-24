@@ -74,6 +74,7 @@ Actions
 			&<fighter_cockpit/fighter_cockpit.txt>/Part
 			&<fighter_reactor/fighter_reactor.txt>/Part
 			&<explosive_bomb/explosive_bomb.txt>/Part
+			&<concussion_bomb/concussion_bomb.txt>/Part
 		]
 	}
 	{

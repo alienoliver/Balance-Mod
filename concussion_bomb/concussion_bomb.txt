@@ -1,13 +1,13 @@
 Part : /BASE_PART
 {
-	NameKey = "Parts/Decoupler"
-	IconNameKey = "Parts/DecouplerIcon"
-	IDString = decoupler
-	EditorGroup = "Misc"
-	DescriptionKey = "Parts/DecouplerDesc"
-	Cost = 0
+	NameKey = "Parts/ConcussionBomb"
+	IconNameKey = "Parts/ConcussionBombIcon"
+	IDString = concussion_bomb
+	EditorGroup = "Weapons"
+	DescriptionKey = "Parts/ConcussionBombDesc"
+	Cost = 500
 	Size = [1, 1]
-	SelectionTypeID = "decoupler"
+	SelectionTypeID = "concussion"
 	MaxHealth = 1
 	AreaDamageBlockFactor = 0
 	Flammable = false
@@ -43,12 +43,13 @@ Part : /BASE_PART
 		{
 			Type = Graphics
 			Location = [0.5, 0.5]
+			Floor // This is needed so that armor shows up in ship ghosts.
 			{
 				Layer = "floors"
 				DamageLevels
 				[
 					{
-						File = "decoupler.png"
+						File = "concussion_bomb.png"
 						Size = [1, 1]
 					}
 				]
@@ -59,7 +60,7 @@ Part : /BASE_PART
 				DamageLevels
 				[
 					{
-						File = "decoupler.png"
+						File = "concussion_bomb.png"
 						Size = [1, 1]
 					}
 				]
@@ -70,7 +71,7 @@ Part : /BASE_PART
 				DamageLevels
 				[
 					{
-						File = "decoupler.png"
+						File = "roof.png"
 						Size = [1, 1]
 					}
 				]
@@ -90,7 +91,7 @@ Part : /BASE_PART
 			Type = TurretWeapon
 			Location = [0.5, 0.5] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
-			FireInterval = 0.01
+			FireInterval = 10
 			FiringArc = 360d
 			RotateSpeed = 360d
 			FireThresholdAngle = 1d
@@ -101,7 +102,7 @@ Part : /BASE_PART
 			Emitter
 			{
 				Type = Bullet
-				Bullet = &<decoupler_shot.txt>
+				Bullet = &<concussion_bomb_shot.txt>
 				Spread = [0d, 0d]
 			}
 		}
@@ -110,6 +111,17 @@ Part : /BASE_PART
 			Type = DeathEffects
 			MediaEffects = &/EFFECT_PREFABS/SmallPartDestroyedDry
 			Location = [.5, .5]
+			HitEffects
+				[
+					{
+						Type = PartAreaDamage
+						RadiusVsOperational = 2
+						RadiusVsStructure = 2
+						Delay = .05
+						AllowFriendlyDamage = true
+					}
+				]
+
 		}
 	}
 }

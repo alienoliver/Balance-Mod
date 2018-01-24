@@ -47,6 +47,10 @@
 	ExplosiveBomb = "Explosive Bomb"
 	ExplosiveBombIcon = "Explosive Bomb"
 	ExplosiveBombDesc = "A rudimentary bomb designed to explode causing great damage to enemy ships."
+
+	ConcussionBomb = "Concussion Bomb"
+	ConcussionBombIcon = "Concussion Bomb"
+	ConcussionBombDesc = "A specialized bomb designed to explode with extreme pushing force."
 }
 Hud
 {
