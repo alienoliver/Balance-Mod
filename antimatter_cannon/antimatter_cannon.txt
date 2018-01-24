@@ -14,7 +14,7 @@ Part : /BASE_PART
 	SaveRect = &PhysicalRect
 	SelectionPriority = 1
 	SelectionTypeByRotation = true
-	SelectionTypeID = "cannons"
+	SelectionTypeID = "antimatter_cannons"
 	MaxHealth = 50000
 	PenetrationResistance = 5
 	ProhibitAbove = 5

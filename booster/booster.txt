@@ -7,7 +7,7 @@ Part : /BASE_PART
 	DescriptionKey = "Parts/BoosterDesc"
 	Cost = 25000
 	Size = [2, 2]
-	SelectionTypeID = "armor"
+	SelectionTypeID = "booster"
 	MaxHealth = 1000
 	AreaDamageBlockFactor = .25
 	Flammable = true
