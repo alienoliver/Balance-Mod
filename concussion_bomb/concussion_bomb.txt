@@ -115,7 +115,9 @@ Part : /BASE_PART
 				[
 					{
 						Type = PartAreaDamage
+						DamageVsOperationalPerTile = 0
 						RadiusVsOperational = 2
+						DamageVsStructurePerTile = 0
 						RadiusVsStructure = 2
 						Delay = .05
 						AllowFriendlyDamage = true

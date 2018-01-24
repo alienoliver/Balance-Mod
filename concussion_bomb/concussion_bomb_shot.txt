@@ -1,4 +1,4 @@
-ID = explosive_bullet
+ID = concussion_bullet
 Range = 100000
 IdealRange = -1
 Speed = 0.1
