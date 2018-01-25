@@ -93,9 +93,9 @@ Part : /BASE_PART
 			Location = [1, 1]
 			FromStorage = BatteryStorage
 			ToStorage = AntimatterStorage
-			FromQuantity = 400
+			FromQuantity = 2000
 			ToQuantity = 1
-			Interval = 2.5
+			Interval = 1
 
 			ConvertAmmoMediaEffects
 			[
