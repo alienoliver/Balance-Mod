@@ -205,7 +205,7 @@ Actions
 		[
 			{
 				ID = antimatter
-				MaxCarried = 100
+				MaxCarried = 1
 				CarriedSprite
 				{
 					File = "antimatter_reactor/antimatter.png"

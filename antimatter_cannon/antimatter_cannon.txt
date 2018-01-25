@@ -75,7 +75,7 @@ Part : /BASE_PART
 		{
 			Type = AmmoConsumer
 			AmmoType = antimatter
-			MaxAmmo = 5
+			MaxAmmo = 10
 			LowConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_LowConsume
 			HighConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_HighConsume
 			EmptyConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_EmptyConsume
@@ -91,7 +91,7 @@ Part : /BASE_PART
 			OnlyWhenOperational = false
 			FromStorage = AmmoStorage
 			ToStorage = LoadedAmmo
-			FromQuantity = 1
+			FromQuantity = 5
 			ToQuantity = 1
 			DelayTrigger = Turret
 			DelayAfterTrigger = .5
