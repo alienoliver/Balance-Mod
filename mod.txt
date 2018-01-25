@@ -92,7 +92,7 @@ Actions
 		Overrides
 		{
 			MaxHealth = 1750
-			Cost = 150
+			Cost = 100
 		}
 	}
 	{
@@ -100,7 +100,7 @@ Actions
 		OverrideIn = "<Ships/Terran/armor_wedge/armor_wedge.txt>/Part/"
 		Overrides
 		{
-			MaxHealth = 4000
+			MaxHealth = 3500
 			Cost = 200
 		}
 	}
