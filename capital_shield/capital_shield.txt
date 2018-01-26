@@ -8,8 +8,6 @@ Part : /BASE_PART
 	Cost = 50000
 	AIValue = 30
 	Size = [4, 4]
-	PhysicalRect = [0, 0, 4, 4]
-	SaveRect = &PhysicalRect
 	SelectionPriority = 1
 	SelectionTypeByRotation = true
 	MaxHealth = 20000
@@ -89,8 +87,8 @@ Part : /BASE_PART
 		ArcShield
 		{
 			Type = ArcShield
-			Radius = 10000
-			Arc = 0.2d
+			Radius = 1000
+			Arc = 2d
 			DrainAmmoFrom = BatteryStorage
 			AmmoDrainPerDamage = 1.5
 			Rotation = -90d
@@ -129,7 +127,7 @@ Part : /BASE_PART
 					FadeInTime = .1
 					FadeOutTime = .5
 					Radius = &~/Part/Components/ArcShield/Radius
-					Arc = 0.2d
+					Arc = 2d
 					ArcSprite
 					{
 						Texture
