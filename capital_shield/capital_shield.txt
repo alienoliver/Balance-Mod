@@ -87,12 +87,12 @@ Part : /BASE_PART
 		ArcShield
 		{
 			Type = ArcShield
-			Radius = 1000
-			Arc = 2d
+			Radius = 100
+			Arc = 20d
 			DrainAmmoFrom = BatteryStorage
 			AmmoDrainPerDamage = 1.5
 			Rotation = -90d
-			Location = [2, 994]
+			Location = [2, 94]
 
 			BlueprintArcSprite
 			{
