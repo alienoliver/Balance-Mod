@@ -66,11 +66,6 @@ Components
 					Damage = 10000
 					AllowFriendlyDamage = true
 				}
-				{
-					Type = Impulse;
-					Impulse = 50;
-					AllowFriendlyImpulse = true
-				}
 			]
 
 			MediaEffects
@@ -85,11 +80,6 @@ Components
 					Type = PartDamage
 					Damage = 10000
 					AllowFriendlyDamage = true
-				}
-				{
-					Type = Impulse;
-					Impulse = 50;
-					AllowFriendlyImpulse = true
 				}
 			]
 		}

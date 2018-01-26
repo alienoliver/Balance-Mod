@@ -96,7 +96,7 @@ Part : /BASE_PART
 			FiringArc = 0d
 			RotateSpeed = 10d
 			FireThresholdAngle = 1d
-			SpawnLoc = [0.5, 0.5]
+			SpawnLoc = [0, 0]
 			TargetSearchTriesPerFrame = 1
 			AIFirepowerRating = 0
 			AutoFire = true

@@ -67,9 +67,9 @@ Components
 					AllowFriendlyDamage = true
 				}
 				{
-					Type = Impulse;
-					Impulse = 300;
-					AllowFriendlyImpulse = true
+					Type = AreaImpulse
+					ImpulsePerTile = 50
+					ImpulseRadius = 6
 				}
 			]
 
@@ -87,9 +87,9 @@ Components
 					AllowFriendlyDamage = true
 				}
 				{
-					Type = Impulse;
-					Impulse = 300;
-					AllowFriendlyImpulse = true
+					Type = AreaImpulse
+					ImpulsePerTile = 50
+					ImpulseRadius = 6
 				}
 			]
 		}
