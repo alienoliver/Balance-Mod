@@ -92,7 +92,7 @@ Part : /BASE_PART
 			DrainAmmoFrom = BatteryStorage
 			AmmoDrainPerDamage = 1.5
 			Rotation = -90d
-			Location = [2, 9994]
+			Location = [2, 994]
 
 			BlueprintArcSprite
 			{
