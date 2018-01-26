@@ -112,22 +112,17 @@ Part : /BASE_PART
 			MediaEffects = &/EFFECT_PREFABS/SmallPartDestroyedDry
 			Location = [.5, .5]
 			HitEffects
-				[
-					{
-						Type = PartAreaDamage
-						DamageVsOperationalPerTile = 0
-						RadiusVsOperational = 2
-						DamageVsStructurePerTile = 0
-						RadiusVsStructure = 2
-						Delay = .05
-						AllowFriendlyDamage = true
-					}
-					{
-						Type = Impulse
-						Impulse = 3000
-					}
-				]
-
+			[
+				{
+					Type = PartAreaDamage
+					DamageVsOperationalPerTile = 0
+					RadiusVsOperational = 2
+					DamageVsStructurePerTile = 0
+					RadiusVsStructure = 2
+					Delay = .05
+					AllowFriendlyDamage = true
+				}
+			]
 		}
 	}
 }

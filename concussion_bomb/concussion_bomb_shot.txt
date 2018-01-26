@@ -71,6 +71,12 @@ Components
 					Impulse = 1500;
 					AllowFriendlyImpulse = true
 				}
+				{
+					Type = AreaImpulse
+					ImpulsePerTile = 1000
+					ImpulseRadius = 10
+					Delay = .05
+				}
 			]
 
 			MediaEffects
