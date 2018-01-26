@@ -1,7 +1,7 @@
 ID = concussion_bullet
 Range = 100000
 IdealRange = -1
-Speed = 0.1
+Speed = 0
 
 Components
 {
@@ -16,6 +16,7 @@ Components
 	{
 		Type = DeathByLifetime
 		// Lifetime will be auto-calculated based on range and speed.
+		Lifetime = 0.1
 	}
 
 	Sprite
@@ -63,7 +64,7 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 10000
+					Damage = 10
 					AllowFriendlyDamage = true
 				}
 				{
@@ -75,7 +76,6 @@ Components
 					Type = AreaImpulse
 					ImpulsePerTile = 1000
 					ImpulseRadius = 10
-					Delay = .05
 				}
 			]
 
@@ -89,13 +89,18 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 10000
+					Damage = 10
 					AllowFriendlyDamage = true
 				}
 				{
 					Type = Impulse;
 					Impulse = 1500;
 					AllowFriendlyImpulse = true
+				}
+				{
+					Type = AreaImpulse
+					ImpulsePerTile = 1000
+					ImpulseRadius = 10
 				}
 			]
 		}

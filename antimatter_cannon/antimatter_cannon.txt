@@ -219,11 +219,11 @@ Part : /BASE_PART
 			Type = TurretWeapon
 			Location = [2.5, 1] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
-			FireInterval = 10
-			FiringArc = 100d
-			RotateSpeed = 30d
+			FireInterval = 30
+			FiringArc = 120d
+			RotateSpeed = 20d
 			FireThresholdAngle = 1d
-			SpawnLoc = [3, 0]
+			SpawnLoc = [4, 0]
 			AmmoStorage = LoadedAmmo
 			AmmoUsed = 1
 			TargetSearchTriesPerFrame = 1
@@ -234,7 +234,7 @@ Part : /BASE_PART
 			{
 				Type = Bullet
 				Bullet = &<antimatter_bullet.txt>
-				Spread = [-4d, 4d]
+				Spread = [-2d, 2d]
 			}
 
 			BlueprintArcSprite

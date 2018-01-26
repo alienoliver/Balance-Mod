@@ -85,6 +85,14 @@ Components
 					Type = Impulse;
 					Impulse = 200;
 				}
+				{
+					Type = PartAreaDamage
+					DamageVsOperationalPerTile = 7000
+					RadiusVsOperational = 6
+					DamageVsStructurePerTile = 2000
+					RadiusVsStructure = 4
+					Delay = .05
+				}
 			]
 
 			MediaEffects
@@ -144,6 +152,14 @@ Components
 				{
 					Type = PartFire
 					FireChance = .5
+				}
+				{
+					Type = PartAreaDamage
+					DamageVsOperationalPerTile = 1000
+					RadiusVsOperational = 4
+					DamageVsStructurePerTile = 1000
+					RadiusVsStructure = 3
+					Delay = .05
 				}
 			]
 
