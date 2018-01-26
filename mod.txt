@@ -2,7 +2,8 @@ Name = "Increased Design Space"
 CompatibleGameVersions = ["0.13.3", "0.13.4"]
 ModifiesMultiplayer = true
 Author = "Collapsible Scoot & CatThingy"
-Description = "Balances the game for flexible and more realistic ship design"
+Description = "Balances the game for flexible and more realistic ship design. \n\n"\
+	"-"
 StringsFolder = "Strings"
 Actions
 [
