@@ -12,8 +12,6 @@ Description = "Balances and introduces more parts for more interesting ship desi
 				 "- Added antimatter-based weaponry for capital ships.\n\n"\
 				 "- Added larger shields and engines for captial ships.\n\n"\
 				 "- Increased ship building area for capital ships and carriers.\n\n"
-Description = "Balances the game for flexible and more realistic ship design. \n\n"\
-	"-"
 StringsFolder = "Strings"
 Actions
 [
