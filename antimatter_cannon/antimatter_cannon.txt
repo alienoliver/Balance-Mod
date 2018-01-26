@@ -5,7 +5,7 @@ Part : /BASE_PART
 	IDString = antimatter_cannon
 	EditorGroup = "Weapons"
 	DescriptionKey = "Parts/AntimatterCannonDesc"
-	Cost = 150000
+	Cost = 750000
 	AIValue = 30
 	TypeCategories = [weapon]
 	RequiresCategories = [AntimatterWeapons]
@@ -74,7 +74,7 @@ Part : /BASE_PART
 		AmmoStorage
 		{
 			Type = AmmoConsumer
-			AmmoType = antimatter
+			AmmoType = antimatter_can
 			MaxAmmo = 10
 			LowConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_LowConsume
 			HighConsumeJobPriority = &/TERRAN_PRIORITIES/MedCannon_HighConsume
@@ -91,7 +91,7 @@ Part : /BASE_PART
 			OnlyWhenOperational = false
 			FromStorage = AmmoStorage
 			ToStorage = LoadedAmmo
-			FromQuantity = 5
+			FromQuantity = 2
 			ToQuantity = 1
 			DelayTrigger = Turret
 			DelayAfterTrigger = .5
@@ -219,7 +219,7 @@ Part : /BASE_PART
 			Type = TurretWeapon
 			Location = [2.5, 1] // Relative to upper-left corner of unrotated part.
 			Rotation = -90d // Relative to unrotated part.
-			FireInterval = 30
+			FireInterval = 20
 			FiringArc = 120d
 			RotateSpeed = 20d
 			FireThresholdAngle = 1d

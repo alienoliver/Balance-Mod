@@ -5,7 +5,7 @@ Part : /BASE_PART
 	IDString = antimatter_reactor
 	EditorGroup = "Power"
 	DescriptionKey = "Parts/AntimatterReactorDesc"
-	Cost = 250000
+	Cost = 2000000
 	AIValue = 60
 	Size = [10, 10]
 	SelectionPriority = 0

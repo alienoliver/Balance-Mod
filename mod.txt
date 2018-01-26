@@ -214,6 +214,17 @@ Actions
 				}
 				CarriedSpriteOffset = [0, .25]
 			}
+			{
+				ID = antimatter_can
+				MaxCarried = 1
+				CarriedSprite
+				{
+					File = "antimatter_reactor/antimatter.png"
+					Size = [1, 1]
+					UVRotation = 2
+				}
+				CarriedSpriteOffset = [0, .25]
+			}
 		]
 	}
 ]
