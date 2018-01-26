@@ -2,7 +2,16 @@ Name = "Increased Design Space"
 CompatibleGameVersions = ["0.13.3", "0.13.4"]
 ModifiesMultiplayer = true
 Author = "Collapsible Scoot & CatThingy"
-Description = "Balances the game for flexible and more realistic ship design"
+Description = "Balances and introduces more parts for more interesting ship design.\n\n\n"\
+				 "- Increased exclusion zone on engines, making it unviable to hide engines inside ships.\n\n"\
+				 "- Removed exclusion zone on shields, making shields less of a problem to design around.\n\n"\
+				 "- Tweaked shields, giving them more health and taking longer to regenerate.\n\n"\
+				 "- Increase health of armor, making them viable as solo defence.\n\n"\
+				 "- Added smaller parts for fighters.\n\n"\
+				 "- Added decouplers, allowing for the creation of carriers.\n\n"\
+				 "- Added antimatter-based weaponry for capital ships.\n\n"\
+				 "- Added larger shields and engines for captial ships.\n\n"\
+				 "- Increased ship building area for capital ships and carriers.\n\n"
 StringsFolder = "Strings"
 Actions
 [
