@@ -5,6 +5,7 @@ Author = "Collapsible Scoot & CatThingy"
 Description = "Balances and introduces more parts for more interesting ship design.\n\n\n"\
 				 "- Increased exclusion zone on engines, making it unviable to hide engines inside ships.\n\n"\
 				 "- Removed exclusion zone on shields, making shields less of a problem to design around.\n\n"\
+				 "- Decreaseds fire rate of point defence, making missiles more viable.\n\n"\
 				 "- Tweaked shields, giving them more health and taking longer to regenerate.\n\n"\
 				 "- Increase health of armor, making them viable as solo defence.\n\n"\
 				 "- Added smaller parts for fighters.\n\n"\
