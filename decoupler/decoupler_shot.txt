@@ -15,7 +15,7 @@ Components
 	Death
 	{
 		Type = DeathByLifetime
-		// Lifetime will be auto-calculated based on range and speed.
+		Lifetime = 0.1
 	}
 
 	Sprite
@@ -63,12 +63,12 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 10000
+					Damage = 1
 					AllowFriendlyDamage = true
 				}
 				{
 					Type = Impulse;
-					Impulse = 10;
+					Impulse = 1;
 					AllowFriendlyImpulse = true
 				}
 			]
@@ -83,12 +83,12 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 10000
+					Damage = 1
 					AllowFriendlyDamage = true
 				}
 				{
 					Type = Impulse;
-					Impulse = 10;
+					Impulse = 1;
 					AllowFriendlyImpulse = true
 				}
 			]

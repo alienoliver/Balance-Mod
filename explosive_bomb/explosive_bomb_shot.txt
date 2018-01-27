@@ -15,7 +15,7 @@ Components
 	Death
 	{
 		Type = DeathByLifetime
-		// Lifetime will be auto-calculated based on range and speed.
+		lifetime = 0.1
 	}
 
 	Sprite
