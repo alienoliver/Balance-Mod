@@ -1,6 +1,6 @@
 ID = gatling_shot
-Range = 40
-IdealRange = 40
+Range = 50
+IdealRange = 50
 Speed = 160
 
 Components
@@ -59,7 +59,7 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 100
+					Damage = 200
 				}
 				{
 					Type = Impulse;
@@ -73,7 +73,7 @@ Components
 			[
 				{
 					Type = PartDamage
-					Damage = 50
+					Damage = 100
 				}
 				{
 					Type = Impulse;
