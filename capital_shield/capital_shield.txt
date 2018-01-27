@@ -164,16 +164,6 @@ Part : /BASE_PART
 				}
 			]
 		}
-
-		EmitterCollider
-		{
-			Type = CircleCollider
-			ChainedTo = ArcShield
-			Location = [.2, 0]
-			Radius = 1
-			Density = .1
-		}
-
 		ArcShieldEffect
 		{
 			Type = ContinuousEffects
@@ -238,7 +228,7 @@ Part : /BASE_PART
 			]
 		}
 
-		EmitterEffect
+		/*EmitterEffect
 		{
 			Type = ContinuousEffects
 			ChainedTo = ArcShield
@@ -295,7 +285,7 @@ Part : /BASE_PART
 					IgnoreIntensity = true
 				}
 			]
-		}
+		}*/
 
 		ShieldOperationEffects
 		{
