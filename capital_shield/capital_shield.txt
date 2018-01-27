@@ -227,66 +227,6 @@ Part : /BASE_PART
 				}
 			]
 		}
-
-		/*EmitterEffect
-		{
-			Type = ContinuousEffects
-			ChainedTo = ArcShield
-			FactorMediaEffectsIntensityWith = ArcShield
-			Location = [2.2, 0]
-			OnlyWhenOperational = true
-			MediaEffects
-			[
-				{
-					Type = ArcShield
-					Radius = 2.2
-					Arc = &~/Part/Components/ArcShield/Arc
-					FadeInTime = .25
-					FadeOutTime = .25
-					ArcSprite
-					{
-						Texture
-						{
-							File = "shield_energy.png"
-							SampleMode = Linear
-							MipLevels = max
-						}
-						UVRect = [0, 1, 1, -1]
-						Shader = "shield.shader"
-						_waveTex
-						{
-							File = "shield_energy_wave.png"
-							UVMode = Wrap
-							SampleMode = Linear
-							MipLevels = max
-						}
-						_waveSpeed = -1
-						_waveAlpha = 1
-						_waveCurveInterval = .5
-						_waveCurveMagnitude = .35
-						_waveCurveUOffsetPerSecond = .2
-						_fullPowerColor = [0, 0, 255, 127]
-						_lowPowerColor = [255, 0, 0, 127]
-						_lowPowerThicknessExponent = .6
-						TargetBlendMode = Add
-						Size = [0, 1.0]
-					}
-					ArcSpriteSegments = 12
-					Bucket = Lower1
-				}
-
-				: /SOUNDS/AudioExteriorDetail
-				{
-					Sound = "shield_emitter_loop.wav"
-					Volume = .2
-					Speed = 1
-					MaxConcurrent = 1
-					MaxConcurrentVolume = .4
-					IgnoreIntensity = true
-				}
-			]
-		}*/
-
 		ShieldOperationEffects
 		{
 			Type = OperationEffects
