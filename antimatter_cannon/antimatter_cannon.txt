@@ -40,8 +40,8 @@ Part : /BASE_PART
 	[
 		{
 			File = "blueprints.png"
-			Size = [3, 5]
-			Offset = [0, -1]
+			Size = [5, 7]
+			Offset = [0,-2]
 		}
 	]
 	Components
@@ -110,15 +110,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "floor.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "floor_33.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "floor_66.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 				]
 			}
@@ -130,7 +130,7 @@ Part : /BASE_PART
 				[
 					{
 						File = "lights.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 				]
 			}
@@ -142,15 +142,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "walls.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "walls_33.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "walls_66.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 				]
 			}
@@ -162,15 +162,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "roof.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "roof_33.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "roof_66.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 				]
 			}
@@ -181,15 +181,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "roof_windows_on.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "roof_windows_on_33.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "roof_windows_on_66.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 				]
 			}
@@ -200,15 +200,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "roof_windows_off.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "roof_windows_off_33.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 					{
 						File = "roof_windows_off_66.png"
-						Size = [3, 4]
+						Size = [5, 7]
 					}
 				]
 			}
@@ -333,15 +333,15 @@ Part : /BASE_PART
 				[
 					{
 						File = "turret floor.png"
-						Size = [3, 3]
+						Size = [5, 6]
 					}
 					{
 						File = "turret floor_33.png"
-						Size = [3, 3]
+						Size = [5, 6]
 					}
 					{
 						File = "turret floor_66.png"
-						Size = [3, 3]
+						Size = [5, 6]
 					}
 				]
 			}
@@ -362,7 +362,7 @@ Part : /BASE_PART
 							"console on7.png"
 							"console on8.png"
 						]
-						Size = [3, 1]
+						Size = [5, 1]
 						AnimationInterval = 0.125
 					}
 				]
@@ -374,7 +374,7 @@ Part : /BASE_PART
 				[
 					{
 						File = "console off.png"
-						Size = [3, 1]
+						Size = [5, 1]
 					}
 				]
 			}
