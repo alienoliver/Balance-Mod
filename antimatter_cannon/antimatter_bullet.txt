@@ -1,7 +1,7 @@
 ID = antimatter_bullet
-Range = 240
-IdealRange = 180
-Speed = 20
+Range = 300
+IdealRange = 225
+Speed = 25
 
 Components
 {
