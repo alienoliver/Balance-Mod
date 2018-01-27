@@ -56,7 +56,8 @@ Components
 		PhysicsComponent = Physics
 		Penetration = 15
 		PenetrationSpeed = 15
-
+		PenetratesShields = true
+		EffectScalePerHit = 0.5
 		HitShield
 		{
 			HitEffects
