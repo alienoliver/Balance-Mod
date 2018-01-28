@@ -1,5 +1,5 @@
 Name = "Increased Design Space"
-CompatibleGameVersions = ["0.13.3", "0.13.4"]
+CompatibleGameVersions = ["0.13.3", "0.13.4", "0.13.5"]
 ModifiesMultiplayer = true
 Author = "Collapsible Scoot & CatThingy"
 Description = "Balances and introduces more parts for more interesting ship design.\n\n\n"\
