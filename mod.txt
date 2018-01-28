@@ -230,7 +230,7 @@ Actions
 				MaxCarried = 1
 				CarriedSprite
 				{
-					File = "antimatter_reactor/antimatter.png"
+					File = "weapons_module/antimatter_can.png"
 					Size = [1, 1]
 					UVRotation = 2
 				}
